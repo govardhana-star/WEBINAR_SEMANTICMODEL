@@ -1,0 +1,126 @@
+{
+  "logicalTable" : {
+    "name" : "DimEmployee(WC_EMPL_D_VH)",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "EMPLOYEE_KEY" ],
+    "logicalColumns" : [ {
+      "name" : "EMPLOYEE_KEY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DimEmployee(WC_EMPL_D_VH)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DimEmployee(WC_EMPL_D_VH).EMPLOYEE_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DimEmployee(WC_EMPL_D_VH)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DimEmployee(WC_EMPL_D_VH).EMPL_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Hire Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DimEmployee(WC_EMPL_D_VH)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DimEmployee(WC_EMPL_D_VH).HIRE_DT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "MGR_ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DimEmployee(WC_EMPL_D_VH)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DimEmployee(WC_EMPL_D_VH).MGR_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "Type",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DimEmployee(WC_EMPL_D_VH)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DimEmployee(WC_EMPL_D_VH).TYPE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "DimEmployee(WC_EMPL_D_VH)",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.DimEmployee(WC_EMPL_D_VH)", "physicalTable:WebinarDatabse.WEBINAR.DimEmp_ParentChild(WC_EMPL_PARENT_CHILD_MAP)" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:WebinarDatabse.WEBINAR.DimEmp_ParentChild(WC_EMPL_PARENT_CHILD_MAP)",
+          "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.DimEmployee(WC_EMPL_D_VH)",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "PARENT_CHILD",
+    "parentChildHierarchy" : {
+      "name" : "EmployeeHierarchy",
+      "description" : "Parent-Child",
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "EMPLOYEE_KEY" ],
+        "displayKey" : "Name",
+        "parentKey" : "MGR_ID"
+      } ],
+      "relationshipTables" : [ {
+        "logicalTableSource" : "DimEmployee(WC_EMPL_D_VH)",
+        "table" : "physicalTable:WebinarDatabse.WEBINAR.DimEmp_ParentChild(WC_EMPL_PARENT_CHILD_MAP)",
+        "memberKey" : "MEMBER_KEY",
+        "parentKey" : "ANCESTOR_KEY",
+        "distance" : "DISTANCE",
+        "leafNodeIdentifier" : "IS_LEAF"
+      } ]
+    }
+  }
+}

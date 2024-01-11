@@ -1,0 +1,9 @@
+{
+  "presentationTable" : {
+    "name" : "Workforce metrics",
+    "presentationColumns" : [ {
+      "name" : "# workers",
+      "sourceLogicalColumn" : "logicalColumn:Webinar.FactWorkforce(PERSON_F).# workers"
+    } ]
+  }
+}
