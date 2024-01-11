@@ -2,7 +2,7 @@
   "logicalTable" : {
     "name" : "DimCalendarDay(DAY_D)",
     "type" : "DIMENSION",
-    "primaryKey" : [ "ROW_ID" ],
+    "primaryKey" : [ "Date" ],
     "logicalColumns" : [ {
       "name" : "ROW_ID",
       "dataType" : "NUMERIC",
@@ -147,7 +147,7 @@
         "numberOfElements" : 1,
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
-        "primaryKey" : [ "ROW_ID" ],
+        "primaryKey" : [ "Date" ],
         "displayKey" : "Date",
         "chronologicalKey" : [ "Date" ]
       }, {

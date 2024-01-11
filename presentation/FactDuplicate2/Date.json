@@ -26,25 +26,31 @@
     "hierarchies" : [ {
       "name" : "HCalendar",
       "sourceLogicalTable" : "logicalTable:FactDuplicate2.DimCalendarDay(DAY_D)",
+      "localization" : { },
       "levels" : [ {
         "name" : "Total",
-        "sourceLogicalLevel" : "logicalLevel:FactDuplicate2.DimCalendarDay(DAY_D).Total"
+        "sourceLogicalLevel" : "logicalLevel:FactDuplicate2.DimCalendarDay(DAY_D).Total",
+        "localization" : { }
       }, {
         "name" : "Year",
         "sourceLogicalLevel" : "logicalLevel:FactDuplicate2.DimCalendarDay(DAY_D).Year",
-        "displayColumn" : "presentationColumn:FactDuplicate2.Date.Year"
+        "displayColumn" : "presentationColumn:FactDuplicate2.Date.Year",
+        "localization" : { }
       }, {
         "name" : "Quarter",
         "sourceLogicalLevel" : "logicalLevel:FactDuplicate2.DimCalendarDay(DAY_D).Quarter",
-        "displayColumn" : "presentationColumn:FactDuplicate2.Date.Quarter"
+        "displayColumn" : "presentationColumn:FactDuplicate2.Date.Quarter",
+        "localization" : { }
       }, {
         "name" : "Month",
         "sourceLogicalLevel" : "logicalLevel:FactDuplicate2.DimCalendarDay(DAY_D).Month",
-        "displayColumn" : "presentationColumn:FactDuplicate2.Date.Month"
+        "displayColumn" : "presentationColumn:FactDuplicate2.Date.Month",
+        "localization" : { }
       }, {
         "name" : "Date",
         "sourceLogicalLevel" : "logicalLevel:FactDuplicate2.DimCalendarDay(DAY_D).Date",
-        "displayColumn" : "presentationColumn:FactDuplicate2.Date.Date"
+        "displayColumn" : "presentationColumn:FactDuplicate2.Date.Date",
+        "localization" : { }
       } ]
     } ]
   }
