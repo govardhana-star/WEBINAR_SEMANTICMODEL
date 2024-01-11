@@ -44,10 +44,11 @@
       "enableFragmentSelection" : false,
       "distinctValues" : false
     } ],
-    "hierarchyType" : "PARENT_CHILD",
-    "parentChildHierarchy" : {
-      "name" : "HContact",
-      "description" : "Parent-Child",
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "ragged" : false,
+      "skipped" : false,
       "logicalLevels" : [ {
         "name" : "Total",
         "numberOfElements" : 1,
@@ -57,15 +58,13 @@
         "name" : "Detail",
         "numberOfElements" : 1,
         "grandTotalLevel" : false,
-        "disableAggregateToHigherLevel" : false
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "CONTACT_ID" ],
+        "displayKey" : "Name"
       } ],
-      "relationshipTables" : [ {
-        "logicalTableSource" : "DimContact(CONTACT)",
-        "table" : "physicalTable:WebinarDatabse.WEBINAR.DimEmp_ParentChild(WC_EMPL_PARENT_CHILD_MAP)",
-        "memberKey" : "MEMBER_KEY",
-        "parentKey" : "ANCESTOR_KEY",
-        "distance" : "DISTANCE",
-        "leafNodeIdentifier" : "IS_LEAF"
+      "logicalHierarchies" : [ {
+        "name" : "HContact",
+        "levels" : [ "Total", "Detail" ]
       } ]
     }
   }

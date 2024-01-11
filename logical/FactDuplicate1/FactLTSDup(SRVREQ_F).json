@@ -97,7 +97,7 @@
           "disable" : false
         } ]
       },
-      "dataGranularity" : [ "logicalLevel:FactDuplicate1.DimCalendarDay(DAY_D).Date", "logicalLevel:FactDuplicate1.DimContact(CONTACT).Detail" ],
+      "dataGranularity" : [ "logicalLevel:FactDuplicate1.DimCalendarDay(DAY_D).Date" ],
       "combineWithOtherFragments" : false,
       "enableFragmentSelection" : false,
       "distinctValues" : false
