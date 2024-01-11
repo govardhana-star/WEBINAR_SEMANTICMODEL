@@ -1,0 +1,9 @@
+{
+  "presentationTable" : {
+    "name" : "Contact",
+    "presentationColumns" : [ {
+      "name" : "Name",
+      "sourceLogicalColumn" : "logicalColumn:FactDuplicate2.DimContact(CONTACT).Name"
+    } ]
+  }
+}

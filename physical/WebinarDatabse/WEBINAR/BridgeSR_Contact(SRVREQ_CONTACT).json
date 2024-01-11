@@ -1,0 +1,17 @@
+{
+  "physicalTable" : {
+    "name" : "BridgeSR_Contact(SRVREQ_CONTACT)",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.SRVREQ_CONTACT",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.DimContact(CONTACT)",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.BridgeSR_Contact(SRVREQ_CONTACT).CONTACT_ID",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DimContact(CONTACT).CONTACT_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

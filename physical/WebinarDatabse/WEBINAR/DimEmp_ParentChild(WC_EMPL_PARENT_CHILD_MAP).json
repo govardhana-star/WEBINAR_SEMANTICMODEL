@@ -1,0 +1,17 @@
+{
+  "physicalTable" : {
+    "name" : "DimEmp_ParentChild(WC_EMPL_PARENT_CHILD_MAP)",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.WC_EMPL_PARENT_CHILD_MAP",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.DimEmployee(WC_EMPL_D_VH)",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DimEmp_ParentChild(WC_EMPL_PARENT_CHILD_MAP).ANCESTOR_KEY",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DimEmployee(WC_EMPL_D_VH).EMPLOYEE_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

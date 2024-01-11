@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "DimCalendarDay(DAY_D)",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.DAY_D",
+    "overrideSourceCacheSetting" : false
+  }
+}

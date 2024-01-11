@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "FactWorkforce(PERSON_F)",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.PERSON_F",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.DimCalendarDay(DAY_D)",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.FactWorkforce(PERSON_F).SNAPSHOT_DT",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DimCalendarDay(DAY_D).CALENDAR_DATE"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.DimEmp_ParentChild(WC_EMPL_PARENT_CHILD_MAP)",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.FactWorkforce(PERSON_F).PERSON_ID",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DimEmp_ParentChild(WC_EMPL_PARENT_CHILD_MAP).MEMBER_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}
