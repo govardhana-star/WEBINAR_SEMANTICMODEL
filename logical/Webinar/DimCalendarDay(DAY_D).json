@@ -87,6 +87,7 @@
         "grandTotalLevel" : false,
         "disableAggregateToHigherLevel" : false,
         "primaryKey" : [ "Date" ],
+        "displayKey" : "Date",
         "chronologicalKey" : [ "Date" ]
       }, {
         "name" : "Year",

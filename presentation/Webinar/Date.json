@@ -35,7 +35,7 @@
       }, {
         "name" : "Date",
         "sourceLogicalLevel" : "logicalLevel:Webinar.DimCalendarDay(DAY_D).Date",
-        "displayColumn" : "presentationColumn:Webinar.DimCalendarDay(DAY_D)"
+        "displayColumn" : "presentationColumn:Webinar.Date.Date"
       } ]
     } ]
   }
