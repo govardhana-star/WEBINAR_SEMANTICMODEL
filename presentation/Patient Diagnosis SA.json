@@ -1,7 +1,7 @@
 {
   "subjectArea" : {
     "name" : "Patient Diagnosis SA",
-    "description" : "Patient Diagnosis SA",
+    "description" : "Patient Diagnosis SA Adding the description to keep track the changes in the git panel",
     "sourceBusinessModel" : "businessModel:Patient Diagnosis Model",
     "tableOrder" : [ {
       "name" : "presentationTable:Patient Diagnosis SA.Diagnosis"
