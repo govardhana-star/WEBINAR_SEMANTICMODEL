@@ -1,0 +1,36 @@
+{
+  "presentationTable" : {
+    "name" : "Channel",
+    "presentationColumns" : [ {
+      "name" : "CHANNEL ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Channel.CHANNEL ID"
+    }, {
+      "name" : "CHANNEL DESC",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Channel.CHANNEL DESC"
+    }, {
+      "name" : "CHANNEL CLASS",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Channel.CHANNEL CLASS"
+    }, {
+      "name" : "CHANNEL CLASS ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Channel.CHANNEL CLASS ID"
+    }, {
+      "name" : "CHANNEL TOTAL",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Channel.CHANNEL TOTAL"
+    }, {
+      "name" : "CHANNEL TOTAL ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Channel.CHANNEL TOTAL ID"
+    } ],
+    "hierarchies" : [ {
+      "name" : "H1",
+      "sourceLogicalTable" : "logicalTable:Patient Diagnosis Bridge Model.Dim - Channel",
+      "levels" : [ {
+        "name" : "Total",
+        "sourceLogicalLevel" : "logicalLevel:Patient Diagnosis Bridge Model.Dim - Channel.Total"
+      }, {
+        "name" : "Detail",
+        "sourceLogicalLevel" : "logicalLevel:Patient Diagnosis Bridge Model.Dim - Channel.Detail",
+        "displayColumn" : "presentationColumn:Sales Details.Channel.CHANNEL ID"
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "subjectArea" : {
+    "name" : "Sales Details",
+    "sourceBusinessModel" : "businessModel:Patient Diagnosis Bridge Model",
+    "tableOrder" : [ {
+      "name" : "presentationTable:Sales Details.Time"
+    }, {
+      "name" : "presentationTable:Sales Details.Channel"
+    }, {
+      "name" : "presentationTable:Sales Details.Daily Sales"
+    }, {
+      "name" : "presentationTable:Sales Details.Order Sales"
+    } ]
+  }
+}

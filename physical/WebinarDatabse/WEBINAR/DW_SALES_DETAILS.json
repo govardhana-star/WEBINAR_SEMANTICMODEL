@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "DW_SALES_DETAILS",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.DW_SALES",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.DW_CHANNELS",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.CHANNEL_ID",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DW_CHANNELS.CHANNEL_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.DW_TIMES",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.TIME_ID",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.TIME_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}
