@@ -1,0 +1,27 @@
+{
+  "presentationTable" : {
+    "name" : "Order Sales",
+    "presentationColumns" : [ {
+      "name" : "PROD ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Fact -Order Sales.PROD ID"
+    }, {
+      "name" : "CUST ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Fact -Order Sales.CUST ID"
+    }, {
+      "name" : "TIME ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Fact -Order Sales.TIME ID"
+    }, {
+      "name" : "CHANNEL ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Fact -Order Sales.CHANNEL ID"
+    }, {
+      "name" : "PROMO ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Fact -Order Sales.PROMO ID"
+    }, {
+      "name" : "QUANTITY SOLD",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Fact -Order Sales.QUANTITY SOLD"
+    }, {
+      "name" : "AMOUNT SOLD",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Fact -Order Sales.AMOUNT SOLD"
+    } ]
+  }
+}

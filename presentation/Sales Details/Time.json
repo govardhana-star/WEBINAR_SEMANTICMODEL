@@ -1,0 +1,120 @@
+{
+  "presentationTable" : {
+    "name" : "Time",
+    "presentationColumns" : [ {
+      "name" : "TIME ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.TIME ID"
+    }, {
+      "name" : "DAY NAME",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.DAY NAME"
+    }, {
+      "name" : "DAY NUMBER IN WEEK",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.DAY NUMBER IN WEEK"
+    }, {
+      "name" : "DAY NUMBER IN MONTH",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.DAY NUMBER IN MONTH"
+    }, {
+      "name" : "CALENDAR WEEK NUMBER",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.CALENDAR WEEK NUMBER"
+    }, {
+      "name" : "FISCAL WEEK NUMBER",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.FISCAL WEEK NUMBER"
+    }, {
+      "name" : "WEEK ENDING DAY",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.WEEK ENDING DAY"
+    }, {
+      "name" : "WEEK ENDING DAY ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.WEEK ENDING DAY ID"
+    }, {
+      "name" : "CALENDAR MONTH NUMBER",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.CALENDAR MONTH NUMBER"
+    }, {
+      "name" : "FISCAL MONTH NUMBER",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.FISCAL MONTH NUMBER"
+    }, {
+      "name" : "CALENDAR MONTH DESC",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.CALENDAR MONTH DESC"
+    }, {
+      "name" : "CALENDAR MONTH ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.CALENDAR MONTH ID"
+    }, {
+      "name" : "FISCAL MONTH DESC",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.FISCAL MONTH DESC"
+    }, {
+      "name" : "FISCAL MONTH ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.FISCAL MONTH ID"
+    }, {
+      "name" : "DAYS IN CAL MONTH",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.DAYS IN CAL MONTH"
+    }, {
+      "name" : "DAYS IN FIS MONTH",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.DAYS IN FIS MONTH"
+    }, {
+      "name" : "END OF CAL MONTH",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.END OF CAL MONTH"
+    }, {
+      "name" : "END OF FIS MONTH",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.END OF FIS MONTH"
+    }, {
+      "name" : "CALENDAR MONTH NAME",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.CALENDAR MONTH NAME"
+    }, {
+      "name" : "FISCAL MONTH NAME",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.FISCAL MONTH NAME"
+    }, {
+      "name" : "CALENDAR QUARTER DESC",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.CALENDAR QUARTER DESC"
+    }, {
+      "name" : "CALENDAR QUARTER ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.CALENDAR QUARTER ID"
+    }, {
+      "name" : "FISCAL QUARTER DESC",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.FISCAL QUARTER DESC"
+    }, {
+      "name" : "FISCAL QUARTER ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.FISCAL QUARTER ID"
+    }, {
+      "name" : "DAYS IN CAL QUARTER",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.DAYS IN CAL QUARTER"
+    }, {
+      "name" : "DAYS IN FIS QUARTER",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.DAYS IN FIS QUARTER"
+    }, {
+      "name" : "END OF CAL QUARTER",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.END OF CAL QUARTER"
+    }, {
+      "name" : "END OF FIS QUARTER",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.END OF FIS QUARTER"
+    }, {
+      "name" : "CALENDAR QUARTER NUMBER",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.CALENDAR QUARTER NUMBER"
+    }, {
+      "name" : "FISCAL QUARTER NUMBER",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.FISCAL QUARTER NUMBER"
+    }, {
+      "name" : "CALENDAR YEAR",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.CALENDAR YEAR"
+    }, {
+      "name" : "CALENDAR YEAR ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.CALENDAR YEAR ID"
+    }, {
+      "name" : "FISCAL YEAR",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.FISCAL YEAR"
+    }, {
+      "name" : "FISCAL YEAR ID",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.FISCAL YEAR ID"
+    }, {
+      "name" : "DAYS IN CAL YEAR",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.DAYS IN CAL YEAR"
+    }, {
+      "name" : "DAYS IN FIS YEAR",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.DAYS IN FIS YEAR"
+    }, {
+      "name" : "END OF CAL YEAR",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.END OF CAL YEAR"
+    }, {
+      "name" : "END OF FIS YEAR",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Times.END OF FIS YEAR"
+    } ]
+  }
+}

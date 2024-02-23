@@ -1,0 +1,186 @@
+{
+  "logicalTable" : {
+    "name" : "Fact - Daily Sales",
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "PROD ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_SALES_DETAILS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.PROD_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Daily_Sales_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.PROD_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "CUST ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_SALES_DETAILS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.CUST_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Daily_Sales_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.CUST_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "TIME ID",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_SALES_DETAILS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.TIME_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Daily_Sales_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.TIME_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "CHANNEL ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_SALES_DETAILS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.CHANNEL_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Daily_Sales_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.CHANNEL_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "PROMO ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_SALES_DETAILS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.PROMO_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Daily_Sales_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.PROMO_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "QUANTITY SOLD",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_SALES_DETAILS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.QUANTITY_SOLD" ]
+          }
+        }, {
+          "logicalTableSource" : "Daily_Sales_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.QUANTITY_SOLD" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "AMOUNT SOLD",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_SALES_DETAILS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.AMOUNT_SOLD" ]
+          }
+        }, {
+          "logicalTableSource" : "Daily_Sales_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_SALES_DETAILS.AMOUNT_SOLD" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "DW_SALES_DETAILS",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.DW_SALES_DETAILS" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "Daily_Sales_LTS",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.DW_SALES_DETAILS" ]
+      },
+      "dataGranularity" : [ "logicalLevel:Patient Diagnosis Bridge Model.Dim - Times.Detail", "logicalLevel:Patient Diagnosis Bridge Model.Dim - Channel.Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "joins" : [ {
+      "rightTable" : "logicalTable:Patient Diagnosis Bridge Model.Dim - Channel",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
+    }, {
+      "rightTable" : "logicalTable:Patient Diagnosis Bridge Model.Dim - Times",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
+    } ]
+  }
+}

@@ -1,0 +1,869 @@
+{
+  "logicalTable" : {
+    "name" : "Dim - Times",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "TIME ID" ],
+    "logicalColumns" : [ {
+      "name" : "TIME ID",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.TIME_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.TIME_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "DAY NAME",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAY_NAME" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAY_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "DAY NUMBER IN WEEK",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAY_NUMBER_IN_WEEK" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAY_NUMBER_IN_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "DAY NUMBER IN MONTH",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAY_NUMBER_IN_MONTH" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAY_NUMBER_IN_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "CALENDAR WEEK NUMBER",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_WEEK_NUMBER" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_WEEK_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "FISCAL WEEK NUMBER",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_WEEK_NUMBER" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_WEEK_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "WEEK ENDING DAY",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.WEEK_ENDING_DAY" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.WEEK_ENDING_DAY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "WEEK ENDING DAY ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.WEEK_ENDING_DAY_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.WEEK_ENDING_DAY_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "CALENDAR MONTH NUMBER",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_MONTH_NUMBER" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_MONTH_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "FISCAL MONTH NUMBER",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_MONTH_NUMBER" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_MONTH_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "CALENDAR MONTH DESC",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_MONTH_DESC" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_MONTH_DESC" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "CALENDAR MONTH ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_MONTH_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_MONTH_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Month"
+    }, {
+      "name" : "FISCAL MONTH DESC",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_MONTH_DESC" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_MONTH_DESC" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "FISCAL MONTH ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_MONTH_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_MONTH_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "DAYS IN CAL MONTH",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAYS_IN_CAL_MONTH" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAYS_IN_CAL_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "DAYS IN FIS MONTH",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAYS_IN_FIS_MONTH" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAYS_IN_FIS_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "END OF CAL MONTH",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.END_OF_CAL_MONTH" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.END_OF_CAL_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "END OF FIS MONTH",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.END_OF_FIS_MONTH" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.END_OF_FIS_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "CALENDAR MONTH NAME",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_MONTH_NAME" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_MONTH_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "FISCAL MONTH NAME",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_MONTH_NAME" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_MONTH_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "CALENDAR QUARTER DESC",
+      "dataType" : "CHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_QUARTER_DESC" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_QUARTER_DESC" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "CALENDAR QUARTER ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_QUARTER_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_QUARTER_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Quarter"
+    }, {
+      "name" : "FISCAL QUARTER DESC",
+      "dataType" : "CHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_QUARTER_DESC" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_QUARTER_DESC" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "FISCAL QUARTER ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_QUARTER_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_QUARTER_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "DAYS IN CAL QUARTER",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAYS_IN_CAL_QUARTER" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAYS_IN_CAL_QUARTER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "DAYS IN FIS QUARTER",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAYS_IN_FIS_QUARTER" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAYS_IN_FIS_QUARTER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "END OF CAL QUARTER",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.END_OF_CAL_QUARTER" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.END_OF_CAL_QUARTER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "END OF FIS QUARTER",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.END_OF_FIS_QUARTER" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.END_OF_FIS_QUARTER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "CALENDAR QUARTER NUMBER",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_QUARTER_NUMBER" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_QUARTER_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "FISCAL QUARTER NUMBER",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_QUARTER_NUMBER" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_QUARTER_NUMBER" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "CALENDAR YEAR",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "CALENDAR YEAR ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_YEAR_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_YEAR_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Year"
+    }, {
+      "name" : "FISCAL YEAR",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "FISCAL YEAR ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_YEAR_ID" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.FISCAL_YEAR_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "DAYS IN CAL YEAR",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAYS_IN_CAL_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAYS_IN_CAL_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "DAYS IN FIS YEAR",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAYS_IN_FIS_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.DAYS_IN_FIS_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "END OF CAL YEAR",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.END_OF_CAL_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.END_OF_CAL_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "END OF FIS YEAR",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_TIMES",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.END_OF_FIS_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "Times_LTS",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.END_OF_FIS_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "DW_TIMES",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.DW_TIMES" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "Times_LTS",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.DW_TIMES" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "TIME ID" ],
+        "displayKey" : "TIME ID"
+      }, {
+        "name" : "Quarter",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "CALENDAR QUARTER ID" ],
+        "displayKey" : "CALENDAR QUARTER ID"
+      }, {
+        "name" : "Year",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "CALENDAR YEAR ID" ],
+        "displayKey" : "CALENDAR YEAR ID"
+      }, {
+        "name" : "Month",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "CALENDAR MONTH ID" ],
+        "displayKey" : "CALENDAR MONTH ID"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "H1",
+        "levels" : [ "Total", "Year", "Quarter", "Month", "Detail" ]
+      } ]
+    }
+  }
+}
