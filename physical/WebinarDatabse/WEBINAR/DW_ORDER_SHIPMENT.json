@@ -1,0 +1,36 @@
+{
+  "physicalTable" : {
+    "name" : "DW_ORDER_SHIPMENT",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "ORDER_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "SHIP_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "AMOUNT",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    },
+    "joins" : [ {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.DW_DATE_DIM",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DW_ORDER_SHIPMENT.ORDER_KEY",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DW_DATE_DIM.DATE_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

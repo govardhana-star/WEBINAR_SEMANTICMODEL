@@ -1,0 +1,11 @@
+{
+  "subjectArea" : {
+    "name" : "Order Shipment",
+    "sourceBusinessModel" : "businessModel:Patient Diagnosis Bridge Model",
+    "tableOrder" : [ {
+      "name" : "presentationTable:Order Shipment.Date"
+    }, {
+      "name" : "presentationTable:Order Shipment.Orders Shipment"
+    } ]
+  }
+}

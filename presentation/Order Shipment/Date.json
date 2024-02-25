@@ -1,0 +1,18 @@
+{
+  "presentationTable" : {
+    "name" : "Date",
+    "presentationColumns" : [ {
+      "name" : "DATE KEY",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Date.DATE KEY"
+    }, {
+      "name" : "CAL DT",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Date.CAL DT"
+    }, {
+      "name" : "CAL MONTH",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Date.CAL MONTH"
+    }, {
+      "name" : "CAL YEAR",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Date.CAL YEAR"
+    } ]
+  }
+}
