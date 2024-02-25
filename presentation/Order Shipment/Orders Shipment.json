@@ -1,0 +1,15 @@
+{
+  "presentationTable" : {
+    "name" : "Orders Shipment",
+    "presentationColumns" : [ {
+      "name" : "ORDER KEY",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Fact - Order Shipment.ORDER KEY"
+    }, {
+      "name" : "SHIP KEY",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Fact - Order Shipment.SHIP KEY"
+    }, {
+      "name" : "AMOUNT",
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Fact - Order Shipment.AMOUNT"
+    } ]
+  }
+}
