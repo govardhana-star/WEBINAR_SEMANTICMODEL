@@ -15,7 +15,8 @@
             "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_DATE_DIM.DATE_KEY" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Detail"
     }, {
       "name" : "CAL DT",
       "dataType" : "DATETIME",
@@ -29,7 +30,8 @@
             "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_DATE_DIM.CAL_DT" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Detail"
     }, {
       "name" : "CAL MONTH",
       "dataType" : "VARCHAR",
@@ -43,7 +45,8 @@
             "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_DATE_DIM.CAL_MONTH" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Detail"
     }, {
       "name" : "CAL YEAR",
       "dataType" : "NUMERIC",
@@ -57,7 +60,8 @@
             "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_DATE_DIM.CAL_YEAR" ]
           }
         } ]
-      }
+      },
+      "logicalLevel" : "Detail"
     } ],
     "logicalTableSources" : [ {
       "name" : "DW_DATE_DIM",
@@ -68,6 +72,29 @@
       "combineWithOtherFragments" : false,
       "enableFragmentSelection" : false,
       "distinctValues" : false
-    } ]
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "DATE KEY" ],
+        "displayKey" : "DATE KEY"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "H1",
+        "levels" : [ "Total", "Detail" ]
+      } ]
+    }
   }
 }
