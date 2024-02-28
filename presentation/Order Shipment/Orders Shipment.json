@@ -2,7 +2,7 @@
   "presentationTable" : {
     "name" : "Orders Shipment",
     "presentationColumns" : [ {
-      "name" : "ORDER KEY",
+      "name" : "Order1 Key",
       "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Fact - Order Shipment.ORDER KEY"
     }, {
       "name" : "SHIP KEY",

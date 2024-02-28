@@ -17,6 +17,16 @@
       "dataType" : "NUMERIC",
       "length" : 0,
       "nullable" : true
+    }, {
+      "name" : "CALENDAR_ID",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "CALENDAR_YEAR",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
     } ],
     "caching" : {
       "enable" : true,
@@ -28,6 +38,15 @@
       "joinConditions" : [ {
         "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DW_ORDER_SHIPMENT.ORDER_KEY",
         "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DW_DATE_DIM.DATE_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.DW_TIMES",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DW_ORDER_SHIPMENT.CALENDAR_ID",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.DW_TIMES.CALENDAR_YEAR_ID"
       } ],
       "joinType" : "INNER",
       "cardinality" : "MANY_TO_ONE"

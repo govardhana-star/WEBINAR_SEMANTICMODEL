@@ -48,6 +48,34 @@
         "rule" : "SUM",
         "dataIsDense" : false
       }
+    }, {
+      "name" : "CALENDAR YEAR",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_ORDER_SHIPMENT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_ORDER_SHIPMENT.CALENDAR_YEAR" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "CALENDAR ID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DW_ORDER_SHIPMENT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.DW_ORDER_SHIPMENT.CALENDAR_ID" ]
+          }
+        } ]
+      }
     } ],
     "logicalTableSources" : [ {
       "name" : "DW_ORDER_SHIPMENT",
@@ -55,6 +83,7 @@
       "tableMapping" : {
         "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.DW_ORDER_SHIPMENT" ]
       },
+      "dataGranularity" : [ "logicalLevel:Patient Diagnosis Bridge Model.Dim - Times.Detail", "logicalLevel:Patient Diagnosis Bridge Model.Dim - Channel.Total", "logicalLevel:Patient Diagnosis Bridge Model.Dim - Date.Detail" ],
       "combineWithOtherFragments" : false,
       "enableFragmentSelection" : false,
       "distinctValues" : false
@@ -62,6 +91,11 @@
     "joins" : [ {
       "rightTable" : "logicalTable:Patient Diagnosis Bridge Model.Dim - Date",
       "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
+    }, {
+      "rightTable" : "logicalTable:Patient Diagnosis Bridge Model.Dim - Times",
+      "joinType" : "INNER",
       "cardinality" : "MANY_TO_ONE",
       "drivingTable" : "None"
     } ]
