@@ -1,7 +1,7 @@
 {
   "physicalTable" : {
     "name" : "DW_CHANNELS",
-    "description" : "This is Channel Table Description.",
+    "description" : "This is the channel Description.",
     "sourceType" : "TABLE",
     "physicalColumns" : [ {
       "name" : "CHANNEL_ID",
