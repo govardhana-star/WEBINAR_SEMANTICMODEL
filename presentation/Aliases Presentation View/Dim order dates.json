@@ -1,0 +1,30 @@
+{
+  "presentationTable" : {
+    "name" : "Dim order dates",
+    "presentationColumns" : [ {
+      "name" : "Row id",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim order dates.Row id"
+    }, {
+      "name" : "Calendar date",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim order dates.Calendar date"
+    }, {
+      "name" : "Cal month",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim order dates.Cal month"
+    }, {
+      "name" : "Cal qtr",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim order dates.Cal qtr"
+    }, {
+      "name" : "Cal year",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim order dates.Cal year"
+    }, {
+      "name" : "Per name month",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim order dates.Per name month"
+    }, {
+      "name" : "Per name qtr",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim order dates.Per name qtr"
+    }, {
+      "name" : "Per name year",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim order dates.Per name year"
+    } ]
+  }
+}

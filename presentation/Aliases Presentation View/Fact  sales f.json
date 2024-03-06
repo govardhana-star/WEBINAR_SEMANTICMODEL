@@ -1,0 +1,69 @@
+{
+  "presentationTable" : {
+    "name" : "Fact  sales f",
+    "presentationColumns" : [ {
+      "name" : "Shipto addr key",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Shipto addr key"
+    }, {
+      "name" : "Office key",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Office key"
+    }, {
+      "name" : "Empl key",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Empl key"
+    }, {
+      "name" : "Prod key",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Prod key"
+    }, {
+      "name" : "Order number",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Order number"
+    }, {
+      "name" : "Revenue",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Revenue"
+    }, {
+      "name" : "Units",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Units"
+    }, {
+      "name" : "Discnt value",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Discnt value"
+    }, {
+      "name" : "Bill mth key",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Bill mth key"
+    }, {
+      "name" : "Bill qtr key",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Bill qtr key"
+    }, {
+      "name" : "Bill day dt",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Bill day dt"
+    }, {
+      "name" : "Order day dt",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Order day dt"
+    }, {
+      "name" : "Paid day dt",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Paid day dt"
+    }, {
+      "name" : "Discnt rate",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Discnt rate"
+    }, {
+      "name" : "Order status",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Order status"
+    }, {
+      "name" : "Currency",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Currency"
+    }, {
+      "name" : "Order type",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Order type"
+    }, {
+      "name" : "Cust key",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Cust key"
+    }, {
+      "name" : "Ship day dt",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Ship day dt"
+    }, {
+      "name" : "Cost fixed",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Cost fixed"
+    }, {
+      "name" : "Cost variable",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact  sales f.Cost variable"
+    } ]
+  }
+}

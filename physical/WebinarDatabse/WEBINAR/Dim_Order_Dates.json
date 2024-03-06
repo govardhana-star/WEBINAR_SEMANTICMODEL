@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "Dim_Order_Dates",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.DW_DAY_D",
+    "overrideSourceCacheSetting" : false
+  }
+}
