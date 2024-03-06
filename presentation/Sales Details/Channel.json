@@ -3,10 +3,12 @@
     "name" : "Channel",
     "presentationColumns" : [ {
       "name" : "CHANNEL ID",
-      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Channel.CHANNEL ID"
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Channel.CHANNEL ID",
+      "alternateNames" : [ "Channel Number" ]
     }, {
       "name" : "CHANNEL DESC",
-      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Channel.CHANNEL DESC"
+      "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Channel.CHANNEL DESC",
+      "alternateNames" : [ "Channel Description" ]
     }, {
       "name" : "CHANNEL CLASS",
       "sourceLogicalColumn" : "logicalColumn:Patient Diagnosis Bridge Model.Dim - Channel.CHANNEL CLASS"

@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "Fact _Sales_F",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.WC_SALES_F",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.Dim_Bill_Dates",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Fact _Sales_F.BILL_DAY_DT",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Dim_Bill_Dates.CALENDAR_DATE"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.Dim_Order_Dates",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Fact _Sales_F.ORDER_DAY_DT",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Dim_Order_Dates.CALENDAR_DATE"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}
