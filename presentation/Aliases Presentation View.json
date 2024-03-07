@@ -8,6 +8,14 @@
       "name" : "presentationTable:Aliases Presentation View.Dim order dates"
     }, {
       "name" : "presentationTable:Aliases Presentation View.Dim bill dates"
+    }, {
+      "name" : "presentationTable:Aliases Presentation View.Order Details"
+    }, {
+      "name" : "presentationTable:Aliases Presentation View.Invoices Metrics"
+    }, {
+      "name" : "presentationTable:Aliases Presentation View.Order Metrics"
+    }, {
+      "name" : "presentationTable:Aliases Presentation View.Time"
     } ]
   }
 }

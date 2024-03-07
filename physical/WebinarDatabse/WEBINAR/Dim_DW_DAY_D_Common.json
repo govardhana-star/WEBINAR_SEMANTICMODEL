@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "Dim_DW_DAY_D_Common",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.DW_DAY_D",
+    "overrideSourceCacheSetting" : false
+  }
+}

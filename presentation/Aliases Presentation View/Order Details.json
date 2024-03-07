@@ -1,0 +1,18 @@
+{
+  "presentationTable" : {
+    "name" : "Order Details",
+    "presentationColumns" : [ {
+      "name" : "Comments",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim w order f.Comments"
+    }, {
+      "name" : "Order date",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim w order f.Order date"
+    }, {
+      "name" : "Order number",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim w order f.Order number"
+    }, {
+      "name" : "Order Amt",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim w order f.Order Amt"
+    } ]
+  }
+}

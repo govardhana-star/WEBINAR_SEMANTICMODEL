@@ -1,0 +1,101 @@
+{
+  "logicalTable" : {
+    "name" : "Dim w order f",
+    "type" : "DIMENSION",
+    "logicalColumns" : [ {
+      "name" : "Order date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_W_ORDER_F",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Dim_W_ORDER_F.ORDER_DATE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Order number",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_W_ORDER_F",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Dim_W_ORDER_F.ORDER_NUMBER" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Comments",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Dim_W_ORDER_F",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Dim_W_ORDER_F.COMMENTS" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Order Amt",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_W_ORDER_F",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Fact_W_ORDER_F.ORDER_AMOUNT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Order amount",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_W_ORDER_F",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Fact_W_ORDER_F.ORDER_AMOUNT" ]
+          }
+        } ]
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Dim_W_ORDER_F",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.Dim_W_ORDER_F" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "Fact_W_ORDER_F",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.Fact_W_ORDER_F" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "primaryKey" : [ "Order date" ]
+  }
+}

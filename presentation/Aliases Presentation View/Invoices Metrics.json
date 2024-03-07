@@ -1,0 +1,9 @@
+{
+  "presentationTable" : {
+    "name" : "Invoices Metrics",
+    "presentationColumns" : [ {
+      "name" : "Invoice amount",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact w invoice f.Invoice amount"
+    } ]
+  }
+}

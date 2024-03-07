@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "Fact_W_INVOICE_F",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.W_INVOICE_F",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.Dim_W_ORDER_F",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Fact_W_INVOICE_F.INVOICE_DATE",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Dim_W_ORDER_F.ORDER_DATE"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.Dim_DW_DAY_D_Common",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Fact_W_INVOICE_F.INVOICE_DATE",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Dim_DW_DAY_D_Common.CALENDAR_DATE"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

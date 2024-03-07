@@ -1,0 +1,9 @@
+{
+  "presentationTable" : {
+    "name" : "Order Metrics",
+    "presentationColumns" : [ {
+      "name" : "Order amount",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Fact w order f.Order amount"
+    } ]
+  }
+}

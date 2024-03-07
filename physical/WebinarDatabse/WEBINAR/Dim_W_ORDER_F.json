@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "Dim_W_ORDER_F",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.W_ORDER_F",
+    "overrideSourceCacheSetting" : false
+  }
+}
