@@ -1,0 +1,27 @@
+{
+  "presentationTable" : {
+    "name" : "Sales",
+    "presentationColumns" : [ {
+      "name" : "Prod id",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Sales oj f.Prod id"
+    }, {
+      "name" : "Cust id",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Sales oj f.Cust id"
+    }, {
+      "name" : "Time id",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Sales oj f.Time id"
+    }, {
+      "name" : "Channel id",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Sales oj f.Channel id"
+    }, {
+      "name" : "Promo id",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Sales oj f.Promo id"
+    }, {
+      "name" : "Quantity sold",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Sales oj f.Quantity sold"
+    }, {
+      "name" : "Amount sold",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Sales oj f.Amount sold"
+    } ]
+  }
+}

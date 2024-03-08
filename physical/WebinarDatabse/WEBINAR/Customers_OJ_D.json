@@ -1,0 +1,17 @@
+{
+  "physicalTable" : {
+    "name" : "Customers_OJ_D",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.CUSTOMERS_D",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.Countries_OJ_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Customers_OJ_D.COUNTRY_ID",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Countries_OJ_D.COUNTRY_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

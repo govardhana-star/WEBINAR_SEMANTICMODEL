@@ -1,0 +1,12 @@
+{
+  "presentationTable" : {
+    "name" : "Channels",
+    "presentationColumns" : [ {
+      "name" : "Channel id",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Channels oj d.Channel id"
+    }, {
+      "name" : "Channel desc",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Channels oj d.Channel desc"
+    } ]
+  }
+}

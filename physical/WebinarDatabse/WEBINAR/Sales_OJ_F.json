@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "Sales_OJ_F",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.DW_SALES",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.Channels_OJ_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Sales_OJ_F.CHANNEL_ID",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Channels_OJ_D.CHANNEL_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.Customers_OJ_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Sales_OJ_F.CUST_ID",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Customers_OJ_D.CUST_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

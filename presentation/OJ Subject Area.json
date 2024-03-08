@@ -1,0 +1,15 @@
+{
+  "subjectArea" : {
+    "name" : "OJ Subject Area",
+    "sourceBusinessModel" : "businessModel:OJ Model",
+    "tableOrder" : [ {
+      "name" : "presentationTable:OJ Subject Area.Channels"
+    }, {
+      "name" : "presentationTable:OJ Subject Area.Countries"
+    }, {
+      "name" : "presentationTable:OJ Subject Area.Customers"
+    }, {
+      "name" : "presentationTable:OJ Subject Area.Sales"
+    } ]
+  }
+}

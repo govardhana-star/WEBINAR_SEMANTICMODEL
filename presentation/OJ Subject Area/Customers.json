@@ -1,0 +1,30 @@
+{
+  "presentationTable" : {
+    "name" : "Customers",
+    "presentationColumns" : [ {
+      "name" : "Cust key",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Customers oj d.Cust key"
+    }, {
+      "name" : "Name",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Customers oj d.Name"
+    }, {
+      "name" : "Marital st",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Customers oj d.Marital st"
+    }, {
+      "name" : "Prev marital st",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Customers oj d.Prev marital st"
+    }, {
+      "name" : "Prev marital st dt",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Customers oj d.Prev marital st dt"
+    }, {
+      "name" : "Crdt rate",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Customers oj d.Crdt rate"
+    }, {
+      "name" : "Country id",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Customers oj d.Country id"
+    }, {
+      "name" : "Country name",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Customers oj d.Country name"
+    } ]
+  }
+}

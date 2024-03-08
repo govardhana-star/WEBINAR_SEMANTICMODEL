@@ -1,0 +1,15 @@
+{
+  "presentationTable" : {
+    "name" : "Countries",
+    "presentationColumns" : [ {
+      "name" : "Country id",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Countries oj d.Country id"
+    }, {
+      "name" : "Country name",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Countries oj d.Country name"
+    }, {
+      "name" : "Country region",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Countries oj d.Country region"
+    } ]
+  }
+}
