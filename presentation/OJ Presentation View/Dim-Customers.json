@@ -1,0 +1,24 @@
+{
+  "presentationTable" : {
+    "name" : "Dim-Customers",
+    "presentationColumns" : [ {
+      "name" : "Cust key",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Dim-Customers.Cust key"
+    }, {
+      "name" : "Name",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Dim-Customers.Name"
+    }, {
+      "name" : "Country id",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Dim-Customers.Country id"
+    }, {
+      "name" : "Country iso code",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Dim-Customers.Country iso code"
+    }, {
+      "name" : "Country name",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Dim-Customers.Country name"
+    }, {
+      "name" : "Country region",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Dim - Countries.Country region"
+    } ]
+  }
+}

@@ -136,6 +136,7 @@
       "tableMapping" : {
         "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.DW_CHANNELS" ]
       },
+      "dataGranularity" : [ "logicalLevel:Patient Diagnosis Bridge Model.Dim - Channel.Detail" ],
       "combineWithOtherFragments" : false,
       "enableFragmentSelection" : false,
       "distinctValues" : false
@@ -145,6 +146,7 @@
       "tableMapping" : {
         "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.DW_CHANNELS" ]
       },
+      "dataGranularity" : [ "logicalLevel:Patient Diagnosis Bridge Model.Dim - Channel.Detail" ],
       "combineWithOtherFragments" : false,
       "enableFragmentSelection" : false,
       "distinctValues" : false

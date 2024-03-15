@@ -1,0 +1,13 @@
+{
+  "subjectArea" : {
+    "name" : "OJ Presentation View",
+    "sourceBusinessModel" : "businessModel:OJ Model",
+    "tableOrder" : [ {
+      "name" : "presentationTable:OJ Presentation View.SALES"
+    }, {
+      "name" : "presentationTable:OJ Presentation View.Dim-Channels"
+    }, {
+      "name" : "presentationTable:OJ Presentation View.Dim-Customers"
+    } ]
+  }
+}

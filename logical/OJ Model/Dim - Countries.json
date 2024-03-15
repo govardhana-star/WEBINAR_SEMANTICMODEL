@@ -1,6 +1,6 @@
 {
   "logicalTable" : {
-    "name" : "Countries oj d",
+    "name" : "Dim - Countries",
     "type" : "DIMENSION",
     "logicalColumns" : [ {
       "name" : "Country id",
@@ -152,6 +152,12 @@
       "combineWithOtherFragments" : false,
       "enableFragmentSelection" : false,
       "distinctValues" : false
+    } ],
+    "joins" : [ {
+      "rightTable" : "logicalTable:OJ Model.Dim-Customers",
+      "joinType" : "FULL_OUTER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
     } ],
     "primaryKey" : [ "Country id" ]
   }

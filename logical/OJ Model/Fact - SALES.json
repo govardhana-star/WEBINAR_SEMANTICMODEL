@@ -1,6 +1,6 @@
 {
   "logicalTable" : {
-    "name" : "Sales oj f",
+    "name" : "Fact - SALES",
     "type" : "FACT",
     "logicalColumns" : [ {
       "name" : "Prod id",
@@ -9,10 +9,10 @@
       "logicalColumnSource" : {
         "derivedFrom" : "PHYSICAL_COLUMNS",
         "physicalMappings" : [ {
-          "logicalTableSource" : "Sales_OJ_F",
+          "logicalTableSource" : "OJ_SALES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Sales_OJ_F.PROD_ID" ]
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.OJ_SALES_F.PROD_ID" ]
           }
         } ]
       }
@@ -23,10 +23,10 @@
       "logicalColumnSource" : {
         "derivedFrom" : "PHYSICAL_COLUMNS",
         "physicalMappings" : [ {
-          "logicalTableSource" : "Sales_OJ_F",
+          "logicalTableSource" : "OJ_SALES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Sales_OJ_F.CUST_ID" ]
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.OJ_SALES_F.CUST_ID" ]
           }
         } ]
       }
@@ -37,10 +37,10 @@
       "logicalColumnSource" : {
         "derivedFrom" : "PHYSICAL_COLUMNS",
         "physicalMappings" : [ {
-          "logicalTableSource" : "Sales_OJ_F",
+          "logicalTableSource" : "OJ_SALES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Sales_OJ_F.TIME_ID" ]
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.OJ_SALES_F.TIME_ID" ]
           }
         } ]
       }
@@ -51,10 +51,10 @@
       "logicalColumnSource" : {
         "derivedFrom" : "PHYSICAL_COLUMNS",
         "physicalMappings" : [ {
-          "logicalTableSource" : "Sales_OJ_F",
+          "logicalTableSource" : "OJ_SALES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Sales_OJ_F.CHANNEL_ID" ]
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.OJ_SALES_F.CHANNEL_ID" ]
           }
         } ]
       }
@@ -65,10 +65,10 @@
       "logicalColumnSource" : {
         "derivedFrom" : "PHYSICAL_COLUMNS",
         "physicalMappings" : [ {
-          "logicalTableSource" : "Sales_OJ_F",
+          "logicalTableSource" : "OJ_SALES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Sales_OJ_F.PROMO_ID" ]
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.OJ_SALES_F.PROMO_ID" ]
           }
         } ]
       }
@@ -79,10 +79,10 @@
       "logicalColumnSource" : {
         "derivedFrom" : "PHYSICAL_COLUMNS",
         "physicalMappings" : [ {
-          "logicalTableSource" : "Sales_OJ_F",
+          "logicalTableSource" : "OJ_SALES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Sales_OJ_F.QUANTITY_SOLD" ]
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.OJ_SALES_F.QUANTITY_SOLD" ]
           }
         } ]
       },
@@ -97,10 +97,10 @@
       "logicalColumnSource" : {
         "derivedFrom" : "PHYSICAL_COLUMNS",
         "physicalMappings" : [ {
-          "logicalTableSource" : "Sales_OJ_F",
+          "logicalTableSource" : "OJ_SALES_F",
           "physicalExpression" : {
             "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Sales_OJ_F.AMOUNT_SOLD" ]
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.OJ_SALES_F.AMOUNT_SOLD" ]
           }
         } ]
       },
@@ -110,22 +110,22 @@
       }
     } ],
     "logicalTableSources" : [ {
-      "name" : "Sales_OJ_F",
+      "name" : "OJ_SALES_F",
       "disable" : false,
       "tableMapping" : {
-        "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.Sales_OJ_F" ]
+        "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.OJ_SALES_F" ]
       },
       "combineWithOtherFragments" : false,
       "enableFragmentSelection" : false,
       "distinctValues" : false
     } ],
     "joins" : [ {
-      "rightTable" : "logicalTable:OJ Model.Channels oj d",
+      "rightTable" : "logicalTable:OJ Model.Dim-Channels",
       "joinType" : "INNER",
       "cardinality" : "MANY_TO_ONE",
       "drivingTable" : "None"
     }, {
-      "rightTable" : "logicalTable:OJ Model.Customers oj d",
+      "rightTable" : "logicalTable:OJ Model.Dim-Customers",
       "joinType" : "INNER",
       "cardinality" : "MANY_TO_ONE",
       "drivingTable" : "None"

@@ -1,6 +1,6 @@
 {
   "logicalTable" : {
-    "name" : "Customers oj d",
+    "name" : "Dim-Customers",
     "type" : "DIMENSION",
     "logicalColumns" : [ {
       "name" : "Cust key",
@@ -363,12 +363,6 @@
       "combineWithOtherFragments" : false,
       "enableFragmentSelection" : false,
       "distinctValues" : false
-    } ],
-    "joins" : [ {
-      "rightTable" : "logicalTable:OJ Model.Countries oj d",
-      "joinType" : "FULL_OUTER",
-      "cardinality" : "MANY_TO_ONE",
-      "drivingTable" : "None"
     } ],
     "primaryKey" : [ "Cust key" ]
   }
