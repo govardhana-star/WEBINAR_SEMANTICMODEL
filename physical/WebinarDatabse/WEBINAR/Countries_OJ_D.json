@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "Countries_OJ_D",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.WC_COUNTRIES",
+    "overrideSourceCacheSetting" : false
+  }
+}

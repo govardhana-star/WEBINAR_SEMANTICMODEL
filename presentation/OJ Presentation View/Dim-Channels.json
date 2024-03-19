@@ -1,0 +1,12 @@
+{
+  "presentationTable" : {
+    "name" : "Dim-Channels",
+    "presentationColumns" : [ {
+      "name" : "Channel id",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Dim-Channels.Channel id"
+    }, {
+      "name" : "Channel desc",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Dim-Channels.Channel desc"
+    } ]
+  }
+}

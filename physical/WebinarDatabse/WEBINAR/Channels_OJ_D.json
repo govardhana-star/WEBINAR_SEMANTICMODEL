@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "Channels_OJ_D",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.DW_CHANNELS",
+    "overrideSourceCacheSetting" : false
+  }
+}

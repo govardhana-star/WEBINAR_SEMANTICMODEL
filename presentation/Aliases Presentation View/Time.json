@@ -1,0 +1,12 @@
+{
+  "presentationTable" : {
+    "name" : "Time",
+    "presentationColumns" : [ {
+      "name" : "Cal year",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim dw day d common.Cal year"
+    }, {
+      "name" : "Calendar date",
+      "sourceLogicalColumn" : "logicalColumn:Aliases Model.Dim dw day d common.Calendar date"
+    } ]
+  }
+}

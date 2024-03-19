@@ -1,0 +1,15 @@
+{
+  "presentationTable" : {
+    "name" : "SALES",
+    "presentationColumns" : [ {
+      "name" : "Quantity sold",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Fact - SALES.Quantity sold"
+    }, {
+      "name" : "Amount sold",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Fact - SALES.Amount sold"
+    }, {
+      "name" : "Channel Id",
+      "sourceLogicalColumn" : "logicalColumn:OJ Model.Fact - SALES.Channel id"
+    } ]
+  }
+}

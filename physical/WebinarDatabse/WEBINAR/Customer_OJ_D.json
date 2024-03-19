@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "Customer_OJ_D",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.WC_CUSTOMERS_D",
+    "overrideSourceCacheSetting" : false
+  }
+}
