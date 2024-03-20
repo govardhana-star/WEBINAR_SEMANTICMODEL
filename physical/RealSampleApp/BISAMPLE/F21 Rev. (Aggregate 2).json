@@ -1,0 +1,35 @@
+{
+  "physicalTable" : {
+    "name" : "F21 Rev. (Aggregate 2)",
+    "sourceTable" : "physicalTable:RealSampleApp.BISAMPLE.SAMP_REVENUE_FA2",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D03 Time Quarter Grain",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:RealSampleApp.BISAMPLE.F21 Rev\\. (Aggregate 2).BILL_QTR_KEY",
+        "rightColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.QTR_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table)",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:RealSampleApp.BISAMPLE.F21 Rev\\. (Aggregate 2).PROD_KEY",
+        "rightColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).PROD_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D20 Product (Ragged Hier)",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:RealSampleApp.BISAMPLE.F21 Rev\\. (Aggregate 2).PROD_KEY",
+        "rightColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D20 Product (Ragged Hier).PROD_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

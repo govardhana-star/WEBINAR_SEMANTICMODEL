@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "D01 Time Day Grain",
+    "sourceTable" : "physicalTable:RealSampleApp.BISAMPLE.SAMP_TIME_DAY_D",
+    "overrideSourceCacheSetting" : false
+  }
+}

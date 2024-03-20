@@ -1,0 +1,571 @@
+{
+  "logicalTable" : {
+    "name" : "D3 Offices",
+    "type" : "DIMENSION",
+    "logicalColumns" : [ {
+      "name" : "D1  Office",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Offices",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.OFFICE_DSC" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.OFFICE_DSC" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "dataIsDense" : false
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "D1k  Office Key",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Offices",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.OFFICE_KEY" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.OFFICE_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "D2k  Dept Key",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Offices",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.DEPT_KEY" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.DEPT_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Department"
+    }, {
+      "name" : "D4  Company",
+      "dataType" : "VARCHAR",
+      "writeable" : true,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Offices",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.COMPANY" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.COMPANY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Company"
+    }, {
+      "name" : "D64  Latitude",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.LATITUDE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "D59  Establishment Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.ESTAB_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "D50  Region",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.REGION" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Office Region"
+    }, {
+      "name" : "D61  ISO Country Code3",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.ISO_COUNTRY_CODE3" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Office Country"
+    }, {
+      "name" : "D52  Country Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.COUNTRY_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Office Country"
+    }, {
+      "name" : "D54  State Code",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.STATE_PROVINCE_ABBRV" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "D51  Area",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.AREA" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Office Area"
+    }, {
+      "name" : "D67  Geo Postal Code",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.POSTAL_CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "D57  Address Line 1",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.ADDRESS1" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "D58  Address Line 2",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.ADDRESS2" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "D56  Postal Code",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.POSTAL_CODE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "D55  City",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.CITY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Office City"
+    }, {
+      "name" : "D53  State Province",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.STATE_PROVINCE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "C62  Ctry Cd3 State Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.CTRY_CD3_STATE_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "C62  Ctry Cd3 State Name Code",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.CTRY_CD3_STATE_ABBRV" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "C63  Ctry Cd3 State Name City",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.CTRY_CD3_STATE_NAME_CITY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "D65  Longitude",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.LONGITUDE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "D3  Organization",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Offices",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.ORGANIZATION" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.ORGANIZATION" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Organization"
+    }, {
+      "name" : "D2  Department",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Offices",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.DEPARTMENT" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.DEPARTMENT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Department"
+    }, {
+      "name" : "D8  Office Sequence",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Offices",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.SEQUENCE" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.SEQUENCE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    }, {
+      "name" : "D4k  Company Key",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Offices",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.COMPANY_KEY" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.COMPANY_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Company"
+    }, {
+      "name" : "D3k  Org Key",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Offices",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.ORG_KEY" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.ORG_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Organization"
+    }, {
+      "name" : "ADDRESS_KEY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Offices Addresses",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.ADDRESS_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Offices Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "LTS1 Offices",
+      "disable" : true,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:RealSampleApp.BISAMPLE.D30 Offices" ]
+      },
+      "dataGranularity" : [ "logicalLevel:01 - Sample App.D3 Offices.Offices Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "LTS2 Offices Addresses",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:RealSampleApp.BISAMPLE.D30 Offices", "physicalTable:RealSampleApp.BISAMPLE.D32 Offices Addresses" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:RealSampleApp.BISAMPLE.D30 Offices",
+          "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D32 Offices Addresses",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "dataGranularity" : [ "logicalLevel:01 - Sample App.D3 Offices.Offices Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Offices Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Offices Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Offices Detail",
+        "numberOfElements" : 25,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "D1k  Office Key" ],
+        "displayKey" : "D1k  Office Key"
+      }, {
+        "name" : "Office Region",
+        "numberOfElements" : 4,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "D50  Region" ],
+        "displayKey" : "D50  Region"
+      }, {
+        "name" : "Offices Company",
+        "numberOfElements" : 3,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "D4k  Company Key" ],
+        "displayKey" : "D4  Company"
+      }, {
+        "name" : "Office Country",
+        "numberOfElements" : 10,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "D52  Country Name" ],
+        "displayKey" : "D52  Country Name"
+      }, {
+        "name" : "Office City",
+        "numberOfElements" : 15,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "D55  City" ],
+        "displayKey" : "D55  City"
+      }, {
+        "name" : "Offices Organization",
+        "numberOfElements" : 6,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "D3k  Org Key" ],
+        "displayKey" : "D3  Organization"
+      }, {
+        "name" : "Offices Department",
+        "numberOfElements" : 10,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "D2k  Dept Key" ],
+        "displayKey" : "D2  Department"
+      }, {
+        "name" : "Office Area",
+        "numberOfElements" : 6,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "D51  Area" ],
+        "displayKey" : "D51  Area"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "H3 Offices",
+        "levels" : [ "Offices Total", "Office Region", "Office Area", "Office Country", "Office City", "Offices Detail" ]
+      }, {
+        "name" : "H3 Regions",
+        "levels" : [ "Offices Total", "Offices Company", "Offices Organization", "Offices Department", "Offices Detail" ]
+      } ]
+    }
+  }
+}

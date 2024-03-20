@@ -1,0 +1,687 @@
+{
+  "logicalTable" : {
+    "name" : "F0 Sales Base Measures",
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "1- Revenue",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.REVENUE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "2- Billed Quantity",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.UNITS" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "3- Discount Amount",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.DISCNT_VALUE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "10- Variable Costs",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.COST_VARIABLE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "11- Fixed Costs",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.COST_FIXED" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "32  # of Cust with Orders  (Cnt Distinct)",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.CUST_KEY" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "33  # of Empl with Orders  (Cnt Distinct)",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.EMPL_KEY" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "34  # of Offices with Orders  (Cnt Distinct)",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.OFFICE_KEY" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "35  # of Products with Orders  (Cnt Distinct)",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.PROD_KEY" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "38  # of Cust SCD Table (Cnt Distinct)",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.CUST_KEY" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "39  Order to Ship Days (Sum)",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "sum(TIMESTAMPDIFF(SQL_TSI_DAY, %1 , %2 ))",
+          "expressionObjects" : [ "logicalColumn:01 - Sample App.F0 Sales Base Measures.ORDER_DAY_DT", "logicalColumn:01 - Sample App.F0 Sales Base Measures.SHIP_DAY_DT" ]
+        }
+      }
+    }, {
+      "name" : "ORDER_KEY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.ORDER_KEY" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "NONE",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "SHIPTO_ADDR_KEY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.SHIPTO_ADDR_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "BILL_MTH_KEY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.BILL_MTH_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "BILL_QTR_KEY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.BILL_QTR_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "BILL_DAY_DT",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.BILL_DAY_DT" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "ORDER_DAY_DT",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.ORDER_DAY_DT" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "PAID_DAY_DT",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.PAID_DAY_DT" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "DISCNT_RATE",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.DISCNT_RATE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "ORDER_STATUS",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.ORDER_STATUS" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "CURRENCY",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.CURRENCY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "ORDER_TYPE",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.ORDER_TYPE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "SHIP_DAY_DT",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.SHIP_DAY_DT" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "SRC_ORDER_NUMBER",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.SRC_ORDER_NUMBER" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "ORDER_NUMBER",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.ORDER_NUMBER" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "31  # of Orders  (Cnt Distinct)",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.ORDER_KEY" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT_DISTINCT",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "FunPod Variable Costs",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "CASE WHEN %1 = 'FunPod' THEN %2 ELSE 0 END",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).BRAND", "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.COST_VARIABLE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "FunPod Fixed Costs",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "CASE WHEN %1 = 'FunPod' THEN %2 ELSE 0 END",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).BRAND", "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.COST_FIXED" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "PROD_KEY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).PROD_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "PROD_DSC",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).PROD_DSC" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "ATTRIBUTE_2",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).ATTRIBUTE_2" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "ATTRIBUTE_1",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).ATTRIBUTE_1" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "TYPE",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).TYPE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "LOB",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).LOB" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "BRAND",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).BRAND" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "SEQUENCE",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).SEQUENCE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "BRAND_KEY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).BRAND_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "LOB_KEY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).LOB_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "TYPE_KEY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).TYPE_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "1003 - Cost Ratio_LTS",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "( %1/%2 )*100.0",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.COST_VARIABLE", "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.COST_FIXED" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "AVG",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "1001 - FunPod Revenue_Case_LTS",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS01 Revenue (Billed Time Join)",
+          "physicalExpression" : {
+            "expressionTemplate" : "CASE WHEN %1 = 'FunPod'  THEN %2  ELSE 0 END",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).BRAND", "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.REVENUE" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "NONE",
+        "dataIsDense" : false
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "LTS01 Revenue (Billed Time Join)",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:RealSampleApp.BISAMPLE.F10 Billed Rev", "physicalTable:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table)" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:RealSampleApp.BISAMPLE.F10 Billed Rev",
+          "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table)",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "joins" : [ {
+      "rightTable" : "logicalTable:01 - Sample App.D1 Products (Level Based Hier)",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
+    }, {
+      "rightTable" : "logicalTable:01 - Sample App.D2 Products (Ragged SkipLevels Hier)",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
+    }, {
+      "rightTable" : "logicalTable:01 - Sample App.D3 Offices",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
+    }, {
+      "rightTable" : "logicalTable:01 - Sample App.D5 Sales Rep (Parent Child Hierarchy)",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
+    }, {
+      "rightTable" : "logicalTable:01 - Sample App.D0 Time",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
+    } ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "D32 Offices Addresses",
+    "sourceTable" : "physicalTable:RealSampleApp.BISAMPLE.SAMP_ADDRESSES_D",
+    "overrideSourceCacheSetting" : false
+  }
+}

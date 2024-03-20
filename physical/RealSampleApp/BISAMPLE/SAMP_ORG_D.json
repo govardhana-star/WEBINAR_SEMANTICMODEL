@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "SAMP_ORG_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "ORG_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "ORG_PARENT_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "ORG_DSC",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

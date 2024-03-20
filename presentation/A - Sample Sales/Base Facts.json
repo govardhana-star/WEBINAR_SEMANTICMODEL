@@ -1,0 +1,42 @@
+{
+  "presentationTable" : {
+    "name" : "Base Facts",
+    "presentationColumns" : [ {
+      "name" : "1- Revenue",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.1- Revenue"
+    }, {
+      "name" : "2- Billed Quantity",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.2- Billed Quantity"
+    }, {
+      "name" : "3- Discount Amount",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.3- Discount Amount"
+    }, {
+      "name" : "10- Variable Costs",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.10- Variable Costs"
+    }, {
+      "name" : "11- Fixed Costs",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.11- Fixed Costs"
+    }, {
+      "name" : "31  # of Orders  (Cnt Distinct)",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.ORDER_KEY"
+    }, {
+      "name" : "32  # of Cust with Orders  (Cnt Distinct)",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.32  # of Cust with Orders  (Cnt Distinct)"
+    }, {
+      "name" : "33  # of Empl with Orders  (Cnt Distinct)",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.33  # of Empl with Orders  (Cnt Distinct)"
+    }, {
+      "name" : "34  # of Offices with Orders  (Cnt Distinct)",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.34  # of Offices with Orders  (Cnt Distinct)"
+    }, {
+      "name" : "35  # of Products with Orders  (Cnt Distinct)",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.35  # of Products with Orders  (Cnt Distinct)"
+    }, {
+      "name" : "38  # of Cust SCD Table (Cnt Distinct)",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.38  # of Cust SCD Table (Cnt Distinct)"
+    }, {
+      "name" : "39  Order to Ship Days (Sum)",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.39  Order to Ship Days (Sum)"
+    } ]
+  }
+}

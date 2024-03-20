@@ -1,0 +1,24 @@
+{
+  "presentationTable" : {
+    "name" : "Sales Person",
+    "presentationColumns" : [ {
+      "name" : "E0  Sales Rep Number",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hierarchy).E0  Sales Rep Number"
+    }, {
+      "name" : "E1  Sales Rep Name",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hierarchy).E1  Sales Rep Name"
+    }, {
+      "name" : "E4k  Position Key",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hierarchy).E4k  Position Key"
+    }, {
+      "name" : "E7  Hire Date",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hierarchy).E7  Hire Date"
+    }, {
+      "name" : "E8  Manager Number",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hierarchy).E8  Manager Number"
+    }, {
+      "name" : "E2  Sales Rep Type",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hierarchy).E2  Sales Rep Type"
+    } ]
+  }
+}

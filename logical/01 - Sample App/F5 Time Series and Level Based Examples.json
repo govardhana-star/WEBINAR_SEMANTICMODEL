@@ -1,0 +1,39 @@
+{
+  "logicalTable" : {
+    "name" : "F5 Time Series and Level Based Examples",
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "121  Period Ago Rev",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "AGO(%1 , %2 , 1)",
+          "expressionObjects" : [ "logicalColumn:01 - Sample App.F0 Sales Base Measures.1- Revenue", "logicalLevel:01 - Sample App.D0 Time.Year" ]
+        }
+      }
+    }, {
+      "name" : "221 Fiscal Year Ago Rev",
+      "dataType" : "INT",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "1"
+        }
+      }
+    }, {
+      "name" : "FunPod Fixed Revenue_LTS",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "LOGICAL_COLUMNS",
+        "logicalExpression" : {
+          "expressionTemplate" : "CASE WHEN %1 = 'FunPod' THEN %2  ELSE 0 END",
+          "expressionObjects" : [ "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P4  Brand", "logicalColumn:01 - Sample App.F0 Sales Base Measures.11- Fixed Costs" ]
+        }
+      }
+    } ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "physicalTable" : {
+    "name" : "SAMP_QUOTAS_F",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "MTH_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "VALUE",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "PROD_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "COMMENTS",
+      "dataType" : "VARCHAR",
+      "length" : 500,
+      "nullable" : true
+    }, {
+      "name" : "CHNL_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

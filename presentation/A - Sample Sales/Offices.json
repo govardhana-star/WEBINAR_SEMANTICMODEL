@@ -1,0 +1,119 @@
+{
+  "presentationTable" : {
+    "name" : "Offices",
+    "presentationColumns" : [ {
+      "name" : "D57  Address Line 1",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D57  Address Line 1"
+    }, {
+      "name" : "D58  Address Line 2",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D58  Address Line 2"
+    }, {
+      "name" : "D56  Postal Code",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D56  Postal Code"
+    }, {
+      "name" : "D55  City",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D55  City"
+    }, {
+      "name" : "D53  State Province",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D53  State Province"
+    }, {
+      "name" : "C62  Ctry Cd3 State Name",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.C62  Ctry Cd3 State Name"
+    }, {
+      "name" : "C62  Ctry Cd3 State Name Code",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.C62  Ctry Cd3 State Name Code"
+    }, {
+      "name" : "C63  Ctry Cd3 State Name City",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.C63  Ctry Cd3 State Name City"
+    }, {
+      "name" : "D65  Longitude",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D65  Longitude"
+    }, {
+      "name" : "D64  Latitude",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D64  Latitude"
+    }, {
+      "name" : "D59  Establishment Name",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D59  Establishment Name"
+    }, {
+      "name" : "D50  Region",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D50  Region"
+    }, {
+      "name" : "D61  ISO Country Code3",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D61  ISO Country Code3"
+    }, {
+      "name" : "D52  Country Name",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D52  Country Name"
+    }, {
+      "name" : "D54  State Code",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D54  State Code"
+    }, {
+      "name" : "D51  Area",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D51  Area"
+    }, {
+      "name" : "D67  Geo Postal Code",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D67  Geo Postal Code"
+    }, {
+      "name" : "D1  Office",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D1  Office"
+    }, {
+      "name" : "D4  Company",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D4  Company"
+    }, {
+      "name" : "D3  Organization",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D3  Organization"
+    }, {
+      "name" : "D2  Department",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D2  Department"
+    }, {
+      "name" : "D1k  Office Key",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D3 Offices.D1k  Office Key"
+    } ],
+    "hierarchies" : [ {
+      "name" : "H3 Offices",
+      "sourceLogicalTable" : "logicalTable:01 - Sample App.D3 Offices",
+      "levels" : [ {
+        "name" : "Offices Total",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D3 Offices.Offices Total"
+      }, {
+        "name" : "Office Region",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D3 Offices.Office Region",
+        "displayColumn" : "presentationColumn:A - Sample Sales.Offices.D50  Region"
+      }, {
+        "name" : "Office Country",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D3 Offices.Office Country",
+        "displayColumn" : "presentationColumn:A - Sample Sales.Offices.D52  Country Name"
+      }, {
+        "name" : "Office City",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D3 Offices.Office City",
+        "displayColumn" : "presentationColumn:A - Sample Sales.Offices.D55  City"
+      }, {
+        "name" : "Offices Detail",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D3 Offices.Offices Detail",
+        "displayColumn" : "presentationColumn:A - Sample Sales.Offices.D1  Office"
+      } ]
+    }, {
+      "name" : "H3 Regions",
+      "sourceLogicalTable" : "logicalTable:01 - Sample App.D3 Offices",
+      "levels" : [ {
+        "name" : "Offices Total",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D3 Offices.Offices Total"
+      }, {
+        "name" : "Offices Company",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D3 Offices.Offices Company",
+        "displayColumn" : "presentationColumn:A - Sample Sales.Offices.D4  Company"
+      }, {
+        "name" : "Offices Organization",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D3 Offices.Offices Organization",
+        "displayColumn" : "presentationColumn:A - Sample Sales.Offices.D3  Organization"
+      }, {
+        "name" : "Offices Department",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D3 Offices.Offices Department",
+        "displayColumn" : "presentationColumn:A - Sample Sales.Offices.D2  Department"
+      }, {
+        "name" : "Offices Detail",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D3 Offices.Offices Detail",
+        "displayColumn" : "presentationColumn:A - Sample Sales.Offices.D1  Office"
+      } ]
+    } ]
+  }
+}

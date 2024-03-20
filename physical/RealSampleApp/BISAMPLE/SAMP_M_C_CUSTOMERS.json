@@ -1,0 +1,21 @@
+{
+  "physicalTable" : {
+    "name" : "SAMP_M_C_CUSTOMERS",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "GUID",
+      "dataType" : "VARCHAR",
+      "length" : 50,
+      "nullable" : true
+    }, {
+      "name" : "QUALIFIED_ID",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

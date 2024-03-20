@@ -10,12 +10,6 @@
     }, {
       "name" : "Discount",
       "sourceLogicalColumn" : "logicalColumn:SampleApp.Fact Revenue.Discount"
-    }, {
-      "name" : "Annual Revenue",
-      "sourceLogicalColumn" : "logicalColumn:SampleApp.Fact Revenue.Annual Revenue"
-    }, {
-      "name" : "All Time Revenue",
-      "sourceLogicalColumn" : "logicalColumn:SampleApp.Fact Revenue.All Time Revenue"
     } ]
   }
 }

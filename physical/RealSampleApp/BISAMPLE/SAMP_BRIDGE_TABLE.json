@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "SAMP_BRIDGE_TABLE",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "CHNL_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "OFFICE_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "CHNL_WEIGHTING",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

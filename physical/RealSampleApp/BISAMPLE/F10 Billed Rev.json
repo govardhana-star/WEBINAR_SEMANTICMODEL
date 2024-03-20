@@ -1,0 +1,71 @@
+{
+  "physicalTable" : {
+    "name" : "F10 Billed Rev",
+    "sourceTable" : "physicalTable:RealSampleApp.BISAMPLE.SAMP_REVENUE_F",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D30 Offices",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.OFFICE_KEY",
+        "rightColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.OFFICE_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table)",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.PROD_KEY",
+        "rightColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).PROD_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D20 Product (Ragged Hier)",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.PROD_KEY",
+        "rightColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D20 Product (Ragged Hier).PROD_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+      "useJoinExpression" : true,
+      "joinExpression" : {
+        "expressionTemplate" : "%1 = %2",
+        "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.EMPL_KEY", "physicalColumn:RealSampleApp.BISAMPLE.D51 Closure Table Sales Rep Parent Child.MEMBER_KEY" ]
+      },
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_MANY"
+    }, {
+      "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D01 Time Day Grain",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.BILL_DAY_DT",
+        "rightColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.CALENDAR_DATE"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D02 Time Month Grain",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.BILL_MTH_KEY",
+        "rightColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.MTH_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D03 Time Quarter Grain",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:RealSampleApp.BISAMPLE.F10 Billed Rev.BILL_QTR_KEY",
+        "rightColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.QTR_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

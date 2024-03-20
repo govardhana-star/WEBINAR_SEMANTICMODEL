@@ -1,0 +1,31 @@
+{
+  "physicalTable" : {
+    "name" : "SAMP_CURRENCY_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "FROM_CURR",
+      "dataType" : "VARCHAR",
+      "length" : 3,
+      "nullable" : true
+    }, {
+      "name" : "TO_CURR",
+      "dataType" : "VARCHAR",
+      "length" : 3,
+      "nullable" : true
+    }, {
+      "name" : "QTR_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "FX_RATE",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

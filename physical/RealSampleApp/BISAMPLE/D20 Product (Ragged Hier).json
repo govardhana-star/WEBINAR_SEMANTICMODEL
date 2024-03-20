@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "D20 Product (Ragged Hier)",
+    "sourceTable" : "physicalTable:RealSampleApp.BISAMPLE.SAMP_PRODUCTS_DR",
+    "overrideSourceCacheSetting" : false
+  }
+}

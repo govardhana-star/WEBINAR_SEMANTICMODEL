@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "SAMP_CHANNELS_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "CHNL_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "CHNL_NAME",
+      "dataType" : "VARCHAR",
+      "length" : 50,
+      "nullable" : true
+    }, {
+      "name" : "CHNL_ATTRIBUTE_1",
+      "dataType" : "VARCHAR",
+      "length" : 50,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

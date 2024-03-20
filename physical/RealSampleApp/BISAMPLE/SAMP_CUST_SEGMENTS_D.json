@@ -1,0 +1,21 @@
+{
+  "physicalTable" : {
+    "name" : "SAMP_CUST_SEGMENTS_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "SEGMENT_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "SEGMENT_DESC",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

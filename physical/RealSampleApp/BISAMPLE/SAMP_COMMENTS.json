@@ -1,0 +1,36 @@
+{
+  "physicalTable" : {
+    "name" : "SAMP_COMMENTS",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "LOB_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "EMPL_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "DAY_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "COMMENT_ID",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "COMMENTARY",
+      "dataType" : "VARCHAR",
+      "length" : 4000,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

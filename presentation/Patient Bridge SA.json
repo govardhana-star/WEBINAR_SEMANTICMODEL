@@ -1,7 +1,6 @@
 {
   "subjectArea" : {
     "name" : "Patient Bridge SA",
-    "description" : "Adding comment to test the tracking in Git Panel.",
     "sourceBusinessModel" : "businessModel:Patient Diagnosis Bridge Model",
     "tableOrder" : [ {
       "name" : "presentationTable:Patient Bridge SA.Patients"

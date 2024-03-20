@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "D03 Time Quarter Grain",
+    "sourceTable" : "physicalTable:RealSampleApp.BISAMPLE.SAMP_TIME_QTR_D",
+    "overrideSourceCacheSetting" : false
+  }
+}

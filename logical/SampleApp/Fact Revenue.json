@@ -56,44 +56,6 @@
         "rule" : "SUM",
         "dataIsDense" : false
       }
-    }, {
-      "name" : "Annual Revenue",
-      "dataType" : "NUMERIC",
-      "writeable" : false,
-      "logicalColumnSource" : {
-        "derivedFrom" : "PHYSICAL_COLUMNS",
-        "physicalMappings" : [ {
-          "logicalTableSource" : "CLOUD_F_BILL_REV",
-          "physicalExpression" : {
-            "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:SampleAppDatabase.BICS_SAMPLEAPP.CLOUD_F_BILL_REV.REVENUE" ]
-          }
-        } ]
-      },
-      "aggregation" : {
-        "rule" : "SUM",
-        "dataIsDense" : false,
-        "aggregateByLevels" : [ "logicalLevel:SampleApp.Dim Date.Year" ]
-      }
-    }, {
-      "name" : "All Time Revenue",
-      "dataType" : "NUMERIC",
-      "writeable" : false,
-      "logicalColumnSource" : {
-        "derivedFrom" : "PHYSICAL_COLUMNS",
-        "physicalMappings" : [ {
-          "logicalTableSource" : "CLOUD_F_BILL_REV",
-          "physicalExpression" : {
-            "expressionTemplate" : "%1",
-            "expressionObjects" : [ "physicalColumn:SampleAppDatabase.BICS_SAMPLEAPP.CLOUD_F_BILL_REV.REVENUE" ]
-          }
-        } ]
-      },
-      "aggregation" : {
-        "rule" : "SUM",
-        "dataIsDense" : false,
-        "aggregateByLevels" : [ "logicalLevel:SampleApp.Dim Date.Total" ]
-      }
     } ],
     "logicalTableSources" : [ {
       "name" : "CLOUD_F_BILL_REV",

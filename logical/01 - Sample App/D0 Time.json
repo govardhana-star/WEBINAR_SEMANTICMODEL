@@ -1,0 +1,1186 @@
+{
+  "logicalTable" : {
+    "name" : "D0 Time",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "T00 Calendar Date" ],
+    "logicalColumns" : [ {
+      "name" : "T00 Calendar Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.CALENDAR_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "T02 Per Name Month",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.PER_NAME_MONTH" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.PER_NAME_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Month"
+    }, {
+      "name" : "T03 Per Name Qtr",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.PER_NAME_QTR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.PER_NAME_QTR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS3 Time Quarter Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.PER_NAME_QTR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Quarter"
+    }, {
+      "name" : "T04 Per Name Half",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.PER_NAME_HALF" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.PER_NAME_HALF" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS3 Time Quarter Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.PER_NAME_HALF" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Half"
+    }, {
+      "name" : "T05 Per Name Year",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.PER_NAME_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.PER_NAME_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS3 Time Quarter Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.PER_NAME_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Year"
+    }, {
+      "name" : "T12 Day Of Month",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAY_OF_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "T11 Day Of Week",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAY_OF_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "T15 Day Of Year",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAY_OF_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "T44 Fscl Half",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.FSCL_HALF" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.FSCL_HALF" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS3 Time Quarter Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.FSCL_HALF" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Half"
+    }, {
+      "name" : "T42 Fscl Month",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.FSCL_MONTH" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.FSCL_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Month"
+    }, {
+      "name" : "T43 Fscl Qtr",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.FSCL_QTR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.FSCL_QTR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS3 Time Quarter Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.FSCL_QTR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Qtr"
+    }, {
+      "name" : "T41 Fscl Week",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.FSCL_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "T45 Fscl Year",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.FSCL_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.FSCL_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS3 Time Quarter Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.FSCL_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Fiscal Year"
+    }, {
+      "name" : "JULIAN_DAY_NUM",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.JULIAN_DAY_NUM" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "JULIAN_MONTH_NUM",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.JULIAN_MONTH_NUM" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.JULIAN_MONTH_NUM" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "JULIAN_QTR_NUM",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.JULIAN_QTR_NUM" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.JULIAN_QTR_NUM" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS3 Time Quarter Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.JULIAN_QTR_NUM" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "JULIAN_WEEK_NUM",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.JULIAN_WEEK_NUM" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "DAY_KEY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAY_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "T34 Cal Half",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.CAL_HALF" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.CAL_HALF" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS3 Time Quarter Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.CAL_HALF" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "T32 Cal Month",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.CAL_MONTH" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.CAL_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "T33 Cal Qtr",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.CAL_QTR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.CAL_QTR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS3 Time Quarter Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.CAL_QTR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "T31 Cal Week",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.CAL_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "T35 Cal Year",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.CAL_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.CAL_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS3 Time Quarter Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.CAL_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "T01 Per Name Week",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.PER_NAME_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "DAYS_IN_QTR",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAYS_IN_QTR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.DAYS_IN_QTR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS3 Time Quarter Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.DAYS_IN_QTR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "DAYS_IN_MTH",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAYS_IN_MTH" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.DAYS_IN_MTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "BEG_OF_QTR_WID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.BEG_OF_QTR_WID" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.BEG_OF_QTR_WID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "BEG_OF_MTH_WID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.BEG_OF_MTH_WID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "BEG_OF_WEEK_WID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.BEG_OF_WEEK_WID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "HOLIDAY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.HOLIDAY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "LOADED",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.LOADED" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.LOADED" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "CAL_MONTH_END_DATE",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.CAL_MONTH_END_DATE" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.CAL_MONTH_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "CAL_QTR_END_DATE",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.CAL_QTR_END_DATE" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.CAL_QTR_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "CAL_HALF_YEAR_END_DATE",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.CAL_HALF_YEAR_END_DATE" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.CAL_HALF_YEAR_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "CAL_YEAR_END_DATE",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.CAL_YEAR_END_DATE" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.CAL_YEAR_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "FSCL_MONTH_END_DATE",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.FSCL_MONTH_END_DATE" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.FSCL_MONTH_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "FSCL_QTR_END_DATE",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.FSCL_QTR_END_DATE" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.FSCL_QTR_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "FSCL_YEAR_END_DATE",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.FSCL_YEAR_END_DATE" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.FSCL_YEAR_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "CAL_WEEK_END_DATE",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.CAL_WEEK_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "FSCL_WEEK_END_DATE",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.FSCL_WEEK_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "DAYS_IN_WEEK",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAYS_IN_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "DAYS_IN_HALF_YEAR",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAYS_IN_HALF_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.DAYS_IN_HALF_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "DAYS_IN_YEAR",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAYS_IN_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.DAYS_IN_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "DAYS_IN_FSCL_WEEK",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAYS_IN_FSCL_WEEK" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "DAYS_IN_FSCL_MONTH",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAYS_IN_FSCL_MONTH" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.DAYS_IN_FSCL_MONTH" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "DAYS_IN_FSCL_QTR",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAYS_IN_FSCL_QTR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.DAYS_IN_FSCL_QTR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "DAYS_IN_FSCL_HALF_YEAR",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAYS_IN_FSCL_HALF_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.DAYS_IN_FSCL_HALF_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "DAYS_IN_FSCL_YEAR",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Time Day Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D01 Time Day Grain.DAYS_IN_FSCL_YEAR" ]
+          }
+        }, {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.DAYS_IN_FSCL_YEAR" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "T06 Row Wid",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.MTH_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "MONTH_AGO_WID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.MONTH_AGO_WID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "QUARTER_AGO_WID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.QUARTER_AGO_WID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "YEAR_AGO_WID",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.YEAR_AGO_WID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "FSCL_HALF_YEAR_END_DATE",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS2 Time Month Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D02 Time Month Grain.FSCL_HALF_YEAR_END_DATE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    }, {
+      "name" : "QTR_KEY",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS3 Time Quarter Grain",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D03 Time Quarter Grain.QTR_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Day Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "LTS1 Time Day Grain",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:RealSampleApp.BISAMPLE.D01 Time Day Grain" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "LTS2 Time Month Grain",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:RealSampleApp.BISAMPLE.D02 Time Month Grain" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "LTS3 Time Quarter Grain",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:RealSampleApp.BISAMPLE.D03 Time Quarter Grain" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "TIME",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Total Time",
+      "logicalLevels" : [ {
+        "name" : "Total Time",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Day Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "T00 Calendar Date" ],
+        "displayKey" : "T00 Calendar Date",
+        "chronologicalKey" : [ "T00 Calendar Date" ]
+      }, {
+        "name" : "Year",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "T05 Per Name Year" ],
+        "displayKey" : "T05 Per Name Year",
+        "chronologicalKey" : [ "T05 Per Name Year" ]
+      }, {
+        "name" : "Fiscal Year",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "T45 Fscl Year" ],
+        "displayKey" : "T45 Fscl Year",
+        "chronologicalKey" : [ "T45 Fscl Year" ]
+      }, {
+        "name" : "Half",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "T04 Per Name Half" ],
+        "displayKey" : "T04 Per Name Half",
+        "chronologicalKey" : [ "T04 Per Name Half" ]
+      }, {
+        "name" : "Quarter",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "T03 Per Name Qtr" ],
+        "displayKey" : "T03 Per Name Qtr",
+        "chronologicalKey" : [ "T03 Per Name Qtr" ]
+      }, {
+        "name" : "Month",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "T02 Per Name Month" ],
+        "displayKey" : "T02 Per Name Month",
+        "chronologicalKey" : [ "T02 Per Name Month" ]
+      }, {
+        "name" : "Fiscal Half",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "T44 Fscl Half", "T45 Fscl Year" ],
+        "displayKey" : "T44 Fscl Half",
+        "chronologicalKey" : [ "T44 Fscl Half", "T45 Fscl Year" ]
+      }, {
+        "name" : "Fiscal Qtr",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "T43 Fscl Qtr", "T45 Fscl Year" ],
+        "displayKey" : "T43 Fscl Qtr",
+        "chronologicalKey" : [ "T43 Fscl Qtr", "T45 Fscl Year" ]
+      }, {
+        "name" : "Fiscal Month",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "T42 Fscl Month", "T45 Fscl Year" ],
+        "displayKey" : "T42 Fscl Month",
+        "chronologicalKey" : [ "T42 Fscl Month", "T45 Fscl Year" ]
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "H0 Time",
+        "levels" : [ "Total Time", "Year", "Half", "Quarter", "Month", "Day Detail" ]
+      }, {
+        "name" : "H0 Fiscal",
+        "levels" : [ "Total Time", "Fiscal Year", "Fiscal Half", "Fiscal Qtr", "Fiscal Month", "Day Detail" ]
+      } ]
+    }
+  }
+}

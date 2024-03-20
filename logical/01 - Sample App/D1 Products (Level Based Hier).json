@@ -1,0 +1,228 @@
+{
+  "logicalTable" : {
+    "name" : "D1 Products (Level Based Hier)",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "P0  Product Number" ],
+    "logicalColumns" : [ {
+      "name" : "P0  Product Number",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Products",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).PROD_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Products Detail"
+    }, {
+      "name" : "P1  Product",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Products",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).PROD_DSC" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Products Detail"
+    }, {
+      "name" : "P6  Attribute 2",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Products",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).ATTRIBUTE_2" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Products Detail"
+    }, {
+      "name" : "P5  Attribute 1",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Products",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).ATTRIBUTE_1" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Products Detail"
+    }, {
+      "name" : "P2  Product Type",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Products",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).TYPE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Products Type"
+    }, {
+      "name" : "P3  LOB",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Products",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).LOB" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Products LOB"
+    }, {
+      "name" : "P4  Brand",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Products",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).BRAND" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Products Brand"
+    }, {
+      "name" : "P7  Product Sequence",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Products",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).SEQUENCE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Products Detail"
+    }, {
+      "name" : "P4k  Brand Key",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Products",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).BRAND_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Products Brand"
+    }, {
+      "name" : "P3k  LOB Key",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Products",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).LOB_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Products LOB"
+    }, {
+      "name" : "P2k  Product Type Key",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "LTS1 Products",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table).TYPE_KEY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Products Type"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "LTS1 Products",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:RealSampleApp.BISAMPLE.D10 Product (Dynamic Table)" ]
+      },
+      "dataGranularity" : [ "logicalLevel:01 - Sample App.D1 Products (Level Based Hier).Products Detail" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "Products Total",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "Products Total",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Products Detail",
+        "numberOfElements" : 15,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "P0  Product Number" ],
+        "displayKey" : "P1  Product"
+      }, {
+        "name" : "Products Brand",
+        "numberOfElements" : 4,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "P4k  Brand Key" ],
+        "displayKey" : "P4  Brand"
+      }, {
+        "name" : "Products LOB",
+        "numberOfElements" : 6,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "P3k  LOB Key" ],
+        "displayKey" : "P3  LOB"
+      }, {
+        "name" : "Products Type",
+        "numberOfElements" : 9,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "P2k  Product Type Key" ],
+        "displayKey" : "P2  Product Type"
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "H1 Products",
+        "levels" : [ "Products Total", "Products Brand", "Products LOB", "Products Type", "Products Detail" ]
+      } ]
+    }
+  }
+}

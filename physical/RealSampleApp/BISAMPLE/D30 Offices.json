@@ -1,0 +1,17 @@
+{
+  "physicalTable" : {
+    "name" : "D30 Offices",
+    "sourceTable" : "physicalTable:RealSampleApp.BISAMPLE.SAMP_OFFICES_D",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D32 Offices Addresses",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D30 Offices.ADDRESS_KEY",
+        "rightColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D32 Offices Addresses.ADDRESS_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

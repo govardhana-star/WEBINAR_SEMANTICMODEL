@@ -1,0 +1,31 @@
+{
+  "physicalTable" : {
+    "name" : "SAMP_LOOKUPS_D",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "LOOKUP_DSC",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    }, {
+      "name" : "LANGUAGE_KEY",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    }, {
+      "name" : "LOOKUP_KEY",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    }, {
+      "name" : "LOOKUP_TYPE",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

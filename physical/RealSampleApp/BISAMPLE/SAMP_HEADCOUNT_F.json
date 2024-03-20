@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "SAMP_HEADCOUNT_F",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "OFFICE_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "DAY_KEY",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "FTE",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

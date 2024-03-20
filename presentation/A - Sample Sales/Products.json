@@ -1,0 +1,63 @@
+{
+  "presentationTable" : {
+    "name" : "Products",
+    "presentationColumns" : [ {
+      "name" : "P0  Product Number",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P0  Product Number"
+    }, {
+      "name" : "P1  Product",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P1  Product"
+    }, {
+      "name" : "P6  Attribute 2",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P6  Attribute 2"
+    }, {
+      "name" : "P5  Attribute 1",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P5  Attribute 1"
+    }, {
+      "name" : "P2  Product Type",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P2  Product Type"
+    }, {
+      "name" : "P3  LOB",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P3  LOB"
+    }, {
+      "name" : "P4  Brand",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P4  Brand"
+    }, {
+      "name" : "P7  Product Sequence",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P7  Product Sequence"
+    }, {
+      "name" : "P4k  Brand Key",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P4k  Brand Key"
+    }, {
+      "name" : "P3k  LOB Key",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P3k  LOB Key"
+    }, {
+      "name" : "P2k  Product Type Key",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P2k  Product Type Key"
+    } ],
+    "hierarchies" : [ {
+      "name" : "H1 Products",
+      "sourceLogicalTable" : "logicalTable:01 - Sample App.D1 Products (Level Based Hier)",
+      "levels" : [ {
+        "name" : "Products Total",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D1 Products (Level Based Hier).Products Total"
+      }, {
+        "name" : "Products Brand",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D1 Products (Level Based Hier).Products Brand",
+        "displayColumn" : "presentationColumn:A - Sample Sales.Products.P4  Brand"
+      }, {
+        "name" : "Products LOB",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D1 Products (Level Based Hier).Products LOB",
+        "displayColumn" : "presentationColumn:A - Sample Sales.Products.P3  LOB"
+      }, {
+        "name" : "Products Type",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D1 Products (Level Based Hier).Products Type",
+        "displayColumn" : "presentationColumn:A - Sample Sales.Products.P2  Product Type"
+      }, {
+        "name" : "Products Detail",
+        "sourceLogicalLevel" : "logicalLevel:01 - Sample App.D1 Products (Level Based Hier).Products Detail",
+        "displayColumn" : "presentationColumn:A - Sample Sales.Products.P1  Product"
+      } ]
+    } ]
+  }
+}

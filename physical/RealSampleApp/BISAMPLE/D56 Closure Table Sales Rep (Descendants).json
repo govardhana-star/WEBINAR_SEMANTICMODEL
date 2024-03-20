@@ -1,0 +1,17 @@
+{
+  "physicalTable" : {
+    "name" : "D56 Closure Table Sales Rep (Descendants)",
+    "sourceTable" : "physicalTable:RealSampleApp.BISAMPLE.SAMP_EMPL_PARENT_CHILD_MAP",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:RealSampleApp.BISAMPLE.D50 Sales Rep (Parent Child Hierarchy)",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D56 Closure Table Sales Rep (Descendants).ANCESTOR_KEY",
+        "rightColumn" : "physicalColumn:RealSampleApp.BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).EMPLOYEE_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

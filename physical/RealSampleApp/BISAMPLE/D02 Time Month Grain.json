@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "D02 Time Month Grain",
+    "sourceTable" : "physicalTable:RealSampleApp.BISAMPLE.SAMP_TIME_MTH_D",
+    "overrideSourceCacheSetting" : false
+  }
+}
