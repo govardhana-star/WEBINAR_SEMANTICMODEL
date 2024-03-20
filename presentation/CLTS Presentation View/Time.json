@@ -1,0 +1,42 @@
+{
+  "presentationTable" : {
+    "name" : "Time",
+    "presentationColumns" : [ {
+      "name" : "Cal year",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Time.Cal year"
+    }, {
+      "name" : "Cal qtr",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Time.Cal qtr"
+    }, {
+      "name" : "Cal month",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Time.Cal month"
+    }, {
+      "name" : "Calendar date",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Time.Calendar date"
+    } ],
+    "hierarchies" : [ {
+      "name" : "Time",
+      "sourceLogicalTable" : "logicalTable:CLTS Model.Dim-Time",
+      "levels" : [ {
+        "name" : "Total",
+        "sourceLogicalLevel" : "logicalLevel:CLTS Model.Dim-Time.Total"
+      }, {
+        "name" : "Year",
+        "sourceLogicalLevel" : "logicalLevel:CLTS Model.Dim-Time.Year",
+        "displayColumn" : "presentationColumn:CLTS Presentation View.Time.Cal year"
+      }, {
+        "name" : "Quarter",
+        "sourceLogicalLevel" : "logicalLevel:CLTS Model.Dim-Time.Quarter",
+        "displayColumn" : "presentationColumn:CLTS Presentation View.Time.Cal qtr"
+      }, {
+        "name" : "Month",
+        "sourceLogicalLevel" : "logicalLevel:CLTS Model.Dim-Time.Month",
+        "displayColumn" : "presentationColumn:CLTS Presentation View.Time.Cal month"
+      }, {
+        "name" : "Detail",
+        "sourceLogicalLevel" : "logicalLevel:CLTS Model.Dim-Time.Detail",
+        "displayColumn" : "presentationColumn:CLTS Presentation View.Time.Calendar date"
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "logicalTable" : {
+    "name" : "Fact - Sales Month",
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "Cal year",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_CLTS_WC_AGG_SALES_MTH_F",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Fact_CLTS_WC_AGG_SALES_MTH_F.CAL_YEAR" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Order month",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_CLTS_WC_AGG_SALES_MTH_F",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Fact_CLTS_WC_AGG_SALES_MTH_F.ORDER_MONTH" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Prod key",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_CLTS_WC_AGG_SALES_MTH_F",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Fact_CLTS_WC_AGG_SALES_MTH_F.PROD_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Revenue",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_CLTS_WC_AGG_SALES_MTH_F",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Fact_CLTS_WC_AGG_SALES_MTH_F.REVENUE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Amount sold",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "Fact_CLTS_WC_AGG_SALES_MTH_F",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.Fact_CLTS_WC_AGG_SALES_MTH_F.AMOUNT_SOLD" ]
+          }
+        } ]
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "Fact_CLTS_WC_AGG_SALES_MTH_F",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.Fact_CLTS_WC_AGG_SALES_MTH_F" ]
+      },
+      "dataGranularity" : [ "logicalLevel:CLTS Model.Dim-Products.Detail", "logicalLevel:CLTS Model.Dim-Time.Month" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "joins" : [ {
+      "rightTable" : "logicalTable:CLTS Model.Dim-Products",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
+    }, {
+      "rightTable" : "logicalTable:CLTS Model.Dim-Time",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
+    } ]
+  }
+}

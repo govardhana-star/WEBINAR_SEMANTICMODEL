@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "Fact_CLTS_WC_AGG_SALES_MTH_F",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.WC_AGG_SALES_MTH_F",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.Dim_CLTS_DAY_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Fact_CLTS_WC_AGG_SALES_MTH_F.ORDER_MONTH",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Dim_CLTS_DAY_D.CAL_MONTH"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.Dim_CLTS_WC_PRODUCTS_D",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Fact_CLTS_WC_AGG_SALES_MTH_F.PROD_KEY",
+        "rightColumn" : "physicalColumn:WebinarDatabse.WEBINAR.Dim_CLTS_WC_PRODUCTS_D.PROD_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

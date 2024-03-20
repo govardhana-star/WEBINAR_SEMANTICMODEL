@@ -1,0 +1,51 @@
+{
+  "presentationTable" : {
+    "name" : "Dim-Products",
+    "presentationColumns" : [ {
+      "name" : "Prod key",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Products.Prod key"
+    }, {
+      "name" : "Prod dsc",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Products.Prod dsc"
+    }, {
+      "name" : "Attribute 2",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Products.Attribute 2"
+    }, {
+      "name" : "Attribute 1",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Products.Attribute 1"
+    }, {
+      "name" : "Type",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Products.Type"
+    }, {
+      "name" : "Lob",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Products.Lob"
+    }, {
+      "name" : "Brand",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Products.Brand"
+    }, {
+      "name" : "Sequence",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Products.Sequence"
+    }, {
+      "name" : "Brand key",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Products.Brand key"
+    }, {
+      "name" : "Lob key",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Products.Lob key"
+    }, {
+      "name" : "Type key",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Dim-Products.Type key"
+    } ],
+    "hierarchies" : [ {
+      "name" : "Products Hierarchy",
+      "sourceLogicalTable" : "logicalTable:CLTS Model.Dim-Products",
+      "levels" : [ {
+        "name" : "Total",
+        "sourceLogicalLevel" : "logicalLevel:CLTS Model.Dim-Products.Total"
+      }, {
+        "name" : "Detail",
+        "sourceLogicalLevel" : "logicalLevel:CLTS Model.Dim-Products.Detail",
+        "displayColumn" : "presentationColumn:CLTS Presentation View.Dim-Products.Prod key"
+      } ]
+    } ]
+  }
+}

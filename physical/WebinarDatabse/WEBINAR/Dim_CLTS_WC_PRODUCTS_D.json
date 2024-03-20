@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "Dim_CLTS_WC_PRODUCTS_D",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.WC_PRODUCTS_D",
+    "overrideSourceCacheSetting" : false
+  }
+}

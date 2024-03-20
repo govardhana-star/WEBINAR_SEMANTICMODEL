@@ -1,0 +1,21 @@
+{
+  "presentationTable" : {
+    "name" : "Sales",
+    "presentationColumns" : [ {
+      "name" : "Revenue",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Fact-Sales Detail.Revenue"
+    }, {
+      "name" : "Units",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Fact-Sales Detail.Units"
+    }, {
+      "name" : "Order status",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Fact-Sales Detail.Order status"
+    }, {
+      "name" : "Amount Sold",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Fact-Sales Detail.Amount Sold"
+    }, {
+      "name" : "Order Month",
+      "sourceLogicalColumn" : "logicalColumn:CLTS Model.Fact - Sales Month.Order month"
+    } ]
+  }
+}

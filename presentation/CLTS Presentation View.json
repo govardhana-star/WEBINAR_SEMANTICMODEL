@@ -1,0 +1,13 @@
+{
+  "subjectArea" : {
+    "name" : "CLTS Presentation View",
+    "sourceBusinessModel" : "businessModel:CLTS Model",
+    "tableOrder" : [ {
+      "name" : "presentationTable:CLTS Presentation View.Time"
+    }, {
+      "name" : "presentationTable:CLTS Presentation View.Sales"
+    }, {
+      "name" : "presentationTable:CLTS Presentation View.Dim-Products"
+    } ]
+  }
+}
