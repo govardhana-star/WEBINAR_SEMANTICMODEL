@@ -1,0 +1,42 @@
+{
+  "presentationTable" : {
+    "name" : "Date",
+    "presentationColumns" : [ {
+      "name" : "Date",
+      "sourceLogicalColumn" : "logicalColumn:Webinar.DimCalendarDay(DAY_D).Date"
+    }, {
+      "name" : "Month",
+      "sourceLogicalColumn" : "logicalColumn:Webinar.DimCalendarDay(DAY_D).Month"
+    }, {
+      "name" : "Quarter",
+      "sourceLogicalColumn" : "logicalColumn:Webinar.DimCalendarDay(DAY_D).Quarter"
+    }, {
+      "name" : "Year",
+      "sourceLogicalColumn" : "logicalColumn:Webinar.DimCalendarDay(DAY_D).Year"
+    } ],
+    "hierarchies" : [ {
+      "name" : "HCalendar",
+      "sourceLogicalTable" : "logicalTable:Webinar.DimCalendarDay(DAY_D)",
+      "levels" : [ {
+        "name" : "Total",
+        "sourceLogicalLevel" : "logicalLevel:Webinar.DimCalendarDay(DAY_D).Total"
+      }, {
+        "name" : "Year",
+        "sourceLogicalLevel" : "logicalLevel:Webinar.DimCalendarDay(DAY_D).Year",
+        "displayColumn" : "presentationColumn:Webinar.Date.Year"
+      }, {
+        "name" : "Quarter",
+        "sourceLogicalLevel" : "logicalLevel:Webinar.DimCalendarDay(DAY_D).Quarter",
+        "displayColumn" : "presentationColumn:Webinar.Date.Quarter"
+      }, {
+        "name" : "Month",
+        "sourceLogicalLevel" : "logicalLevel:Webinar.DimCalendarDay(DAY_D).Month",
+        "displayColumn" : "presentationColumn:Webinar.Date.Month"
+      }, {
+        "name" : "Date",
+        "sourceLogicalLevel" : "logicalLevel:Webinar.DimCalendarDay(DAY_D).Date",
+        "displayColumn" : "presentationColumn:Webinar.Date.Date"
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "presentationTable" : {
+    "name" : "Employees",
+    "presentationColumns" : [ {
+      "name" : "Name",
+      "sourceLogicalColumn" : "logicalColumn:Webinar.DimEmployee(WC_EMPL_D_VH).Name"
+    }, {
+      "name" : "Hire Date",
+      "sourceLogicalColumn" : "logicalColumn:Webinar.DimEmployee(WC_EMPL_D_VH).Hire Date"
+    }, {
+      "name" : "Type",
+      "sourceLogicalColumn" : "logicalColumn:Webinar.DimEmployee(WC_EMPL_D_VH).Type"
+    } ],
+    "hierarchies" : [ {
+      "name" : "EmployeeHierarchy",
+      "sourceLogicalTable" : "logicalTable:Webinar.DimEmployee(WC_EMPL_D_VH)",
+      "displayColumn" : "presentationColumn:Webinar.Employees.Name"
+    } ]
+  }
+}

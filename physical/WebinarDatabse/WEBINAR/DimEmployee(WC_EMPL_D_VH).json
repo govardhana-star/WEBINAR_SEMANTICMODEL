@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "DimEmployee(WC_EMPL_D_VH)",
+    "sourceTable" : "physicalTable:WebinarDatabse.WEBINAR.WC_EMPL_D_VH",
+    "overrideSourceCacheSetting" : false
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "logicalTable" : {
+    "name" : "FactLTSDup(SRVREQ_F)",
+    "type" : "FACT",
+    "logicalColumns" : [ {
+      "name" : "# SRs",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "FactLTSDup(SRVREQ_F)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.FactLTSDup(SRVREQ_F).SR_ID" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Duration(minutes)",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "FactLTSDup(SRVREQ_F)",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.FactLTSDup(SRVREQ_F).DURATION_MINS" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "SUM",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "# Contacts",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "FactLTSDup(SRVREQ_F)_Contact",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.BridgeSR_Contact(SRVREQ_CONTACT).CONTACT_ID" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT",
+        "dataIsDense" : false
+      }
+    }, {
+      "name" : "Test SRContact",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "FactLTSDup(SRVREQ_F)_Contact",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:WebinarDatabse.WEBINAR.BridgeSR_Contact(SRVREQ_CONTACT).SR_ID" ]
+          }
+        } ]
+      },
+      "aggregation" : {
+        "rule" : "COUNT",
+        "dataIsDense" : false
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "FactLTSDup(SRVREQ_F)",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.FactLTSDup(SRVREQ_F)" ]
+      },
+      "dataGranularity" : [ "logicalLevel:FactDuplicate1.DimCalendarDay(DAY_D).Date" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    }, {
+      "name" : "FactLTSDup(SRVREQ_F)_Contact",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:WebinarDatabse.WEBINAR.FactLTSDup(SRVREQ_F)", "physicalTable:WebinarDatabse.WEBINAR.BridgeSR_Contact(SRVREQ_CONTACT)" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:WebinarDatabse.WEBINAR.FactLTSDup(SRVREQ_F)",
+          "rightTable" : "physicalTable:WebinarDatabse.WEBINAR.BridgeSR_Contact(SRVREQ_CONTACT)",
+          "joinType" : "LEFT_OUTER",
+          "disable" : false
+        } ]
+      },
+      "dataGranularity" : [ "logicalLevel:FactDuplicate1.DimCalendarDay(DAY_D).Date" ],
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "joins" : [ {
+      "rightTable" : "logicalTable:FactDuplicate1.DimCalendarDay(DAY_D)",
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
+    }, {
+      "rightTable" : "logicalTable:FactDuplicate1.DimContact(CONTACT)",
+      "joinType" : "LEFT_OUTER",
+      "cardinality" : "MANY_TO_ONE",
+      "drivingTable" : "None"
+    } ]
+  }
+}

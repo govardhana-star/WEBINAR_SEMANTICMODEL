@@ -1,0 +1,13 @@
+{
+  "subjectArea" : {
+    "name" : "Webinar",
+    "sourceBusinessModel" : "businessModel:Webinar",
+    "tableOrder" : [ {
+      "name" : "presentationTable:Webinar.Date"
+    }, {
+      "name" : "presentationTable:Webinar.Employees"
+    }, {
+      "name" : "presentationTable:Webinar.Workforce metrics"
+    } ]
+  }
+}
