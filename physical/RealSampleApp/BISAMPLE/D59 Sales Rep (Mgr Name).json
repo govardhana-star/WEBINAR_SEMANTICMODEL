@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "D59 Sales Rep (Mgr Name)",
+    "sourceTable" : "physicalTable:RealSampleApp.BISAMPLE.SAMP_EMPL_D_VH",
+    "overrideSourceCacheSetting" : false
+  }
+}

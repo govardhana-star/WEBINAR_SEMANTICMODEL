@@ -17,9 +17,6 @@
       "name" : "11- Fixed Costs",
       "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.11- Fixed Costs"
     }, {
-      "name" : "31  # of Orders  (Cnt Distinct)",
-      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.ORDER_KEY"
-    }, {
       "name" : "32  # of Cust with Orders  (Cnt Distinct)",
       "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.32  # of Cust with Orders  (Cnt Distinct)"
     }, {
@@ -37,6 +34,12 @@
     }, {
       "name" : "39  Order to Ship Days (Sum)",
       "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.39  Order to Ship Days (Sum)"
+    }, {
+      "name" : "1001 - FunPod Revenue_Case_LTS",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.1001 - FunPod Revenue_Case_LTS"
+    }, {
+      "name" : "1003 - Cost Ratio_LTS",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.1003 - Cost Ratio_LTS"
     } ]
   }
 }

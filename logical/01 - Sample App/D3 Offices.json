@@ -2,6 +2,7 @@
   "logicalTable" : {
     "name" : "D3 Offices",
     "type" : "DIMENSION",
+    "primaryKey" : [ "D1k  Office Key" ],
     "logicalColumns" : [ {
       "name" : "D1  Office",
       "dataType" : "VARCHAR",

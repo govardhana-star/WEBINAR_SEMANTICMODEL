@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "D52 Sales Rep Position",
+    "sourceTable" : "physicalTable:RealSampleApp.BISAMPLE.SAMP_EMPL_POSTN_D",
+    "overrideSourceCacheSetting" : false
+  }
+}

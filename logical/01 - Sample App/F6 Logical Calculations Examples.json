@@ -3,30 +3,15 @@
     "name" : "F6 Logical Calculations Examples",
     "type" : "FACT",
     "logicalColumns" : [ {
-      "name" : "1001 - FunPod Cost Ratio_LTS",
+      "name" : "1003 - Cost Ratio_Logical",
       "dataType" : "NUMERIC",
       "writeable" : false,
       "logicalColumnSource" : {
         "derivedFrom" : "LOGICAL_COLUMNS",
         "logicalExpression" : {
-          "expressionTemplate" : "(%1 /%2 )*100.0",
-          "expressionObjects" : [ "logicalColumn:01 - Sample App.F0 Sales Base Measures.FunPod Variable Costs", "logicalColumn:01 - Sample App.F0 Sales Base Measures.FunPod Fixed Costs" ]
+          "expressionTemplate" : "CASE WHEN %1 = 'FunPod' THEN %2 ELSE 0 END",
+          "expressionObjects" : [ "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P4  Brand", "logicalColumn:01 - Sample App.F0 Sales Base Measures.1- Revenue" ]
         }
-      }
-    }, {
-      "name" : "1003 - Cost Ratio - Logical",
-      "dataType" : "NUMERIC",
-      "writeable" : false,
-      "logicalColumnSource" : {
-        "derivedFrom" : "LOGICAL_COLUMNS",
-        "logicalExpression" : {
-          "expressionTemplate" : "(%1 /%2 )*100.0",
-          "expressionObjects" : [ "logicalColumn:01 - Sample App.F0 Sales Base Measures.10- Variable Costs", "logicalColumn:01 - Sample App.F0 Sales Base Measures.11- Fixed Costs" ]
-        }
-      },
-      "aggregation" : {
-        "rule" : "NONE",
-        "dataIsDense" : false
       }
     }, {
       "name" : "1001 - FunPod Revenue_Case_Logical",
@@ -35,13 +20,9 @@
       "logicalColumnSource" : {
         "derivedFrom" : "LOGICAL_COLUMNS",
         "logicalExpression" : {
-          "expressionTemplate" : "CASE WHEN %1 = 'FunPod' THEN %2  ELSE 0 END",
-          "expressionObjects" : [ "logicalColumn:01 - Sample App.D1 Products (Level Based Hier).P4  Brand", "logicalColumn:01 - Sample App.F0 Sales Base Measures.1- Revenue" ]
+          "expressionTemplate" : "(%1 /%2) *100.0",
+          "expressionObjects" : [ "logicalColumn:01 - Sample App.F0 Sales Base Measures.10- Variable Costs", "logicalColumn:01 - Sample App.F0 Sales Base Measures.11- Fixed Costs" ]
         }
-      },
-      "aggregation" : {
-        "rule" : "NONE",
-        "dataIsDense" : false
       }
     } ]
   }

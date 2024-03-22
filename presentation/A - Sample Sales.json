@@ -3,6 +3,8 @@
     "name" : "A - Sample Sales",
     "sourceBusinessModel" : "businessModel:01 - Sample App",
     "tableOrder" : [ {
+      "name" : "presentationTable:A - Sample Sales.Time"
+    }, {
       "name" : "presentationTable:A - Sample Sales.Products"
     }, {
       "name" : "presentationTable:A - Sample Sales.Product Ragged Skipped Levels"
@@ -11,11 +13,15 @@
     }, {
       "name" : "presentationTable:A - Sample Sales.Sales Person"
     }, {
-      "name" : "presentationTable:A - Sample Sales.Base Facts"
-    }, {
-      "name" : "presentationTable:A - Sample Sales.Time"
-    }, {
-      "name" : "presentationTable:A - Sample Sales.Simple Calculations"
+      "name" : "presentationTable:A - Sample Sales.Facts",
+      "children" : [ {
+        "name" : "presentationTable:A - Sample Sales.Calculations",
+        "children" : [ {
+          "name" : "presentationTable:A - Sample Sales.Simple Calculations"
+        } ]
+      }, {
+        "name" : "presentationTable:A - Sample Sales.Base Facts"
+      } ]
     } ]
   }
 }

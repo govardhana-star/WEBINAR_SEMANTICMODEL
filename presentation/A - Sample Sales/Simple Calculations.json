@@ -8,11 +8,11 @@
       "name" : "221 Fiscal Year Ago Rev",
       "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F5 Time Series and Level Based Examples.221 Fiscal Year Ago Rev"
     }, {
-      "name" : "FunPod Fixed Revenue_LTS",
-      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F5 Time Series and Level Based Examples.FunPod Fixed Revenue_LTS"
+      "name" : "1003 - Cost Ratio_Logical",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F6 Logical Calculations Examples.1003 - Cost Ratio_Logical"
     }, {
-      "name" : "1001 - FunPod Cost Ratio_LTS",
-      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F6 Logical Calculations Examples.1001 - FunPod Cost Ratio_LTS"
+      "name" : "1001 - FunPod Revenue_Case_Logical",
+      "sourceLogicalColumn" : "logicalColumn:01 - Sample App.F0 Sales Base Measures.1001 - FunPod Revenue_Case_LTS"
     } ]
   }
 }
